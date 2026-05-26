@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
 import './styles/global.css';
+import App from './App';
 
-/*
-  Point d'entrée principal de l'application.
-  On importe global.css ici pour que les variables CSS et styles communs
-  soient disponibles sur toutes les pages sans duplication.
-*/
+import { PrimeReactProvider } from 'primereact/api';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <PrimeReactProvider>
+        <App />
+      </PrimeReactProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="site-footer__bottom">
         <div className="site-footer__links">
           <a href="infos-pratiques">Nous contacter</a>
-          <a href="placeholder">Plan du site</a>
+          <a href="plan-site">Plan du site</a>
           <a href="accessibilite">Accessibilité</a>
           <a href="https://adecec.net/adecec/cuntattu.php#legal"> Mentions légales</a>
           <a href="placeholder">Crédits</a>

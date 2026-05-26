@@ -7,6 +7,8 @@ import LesSalles from './pages/LesSalles';
 import InfosPratiques from './pages/InfosPratiques';
 import Accessibilite from './pages/Accessibilite';
 import NotFound from './pages/NotFound';
+import PlanSite from './pages/PlanSite';
+import EasterEgg from './pages/EasterEgg';
 
 /*
   Ce composant centralise les routes.
@@ -23,7 +25,10 @@ export default function App() {
         <Route path="/les-salles" element={<LesSalles />} />
         <Route path="/infos-pratiques" element={<InfosPratiques />} />
         <Route path="/accessibilite" element={<Accessibilite />} />
+        <Route path="/plan-site" element={<PlanSite />} />
+        <Route path="/easter-egg" element={<EasterEgg />} />
         <Route path="*" element={<NotFound />} />
+
       </Route>
     </Routes>
   );

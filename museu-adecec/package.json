@@ -12,10 +12,18 @@
   "dependencies": {
     "@mantine/core": "^9.2.1",
     "@mantine/hooks": "^9.2.1",
+    "@tailwindcss/vite": "^4.3.0",
+    "@untitledui/icons": "^0.0.22",
     "framer-motion": "^12.40.0",
+    "primereact": "^10.9.8",
     "react": "^19.2.6",
+    "react-aria-components": "^1.18.0",
     "react-dom": "^19.2.6",
-    "react-router-dom": "^7.15.1"
+    "react-router-dom": "^7.15.1",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^2.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

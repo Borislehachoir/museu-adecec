@@ -2,7 +2,7 @@
   Cette page est volontairement minimale.
   Le brief demande un placeholder simple à développer ensuite.
 */
-export default function LesSalles() {
+export default function Accessibilite() {
   return (
     <section className="basic-page access-page">
       <h1 className="access-title">Déclaration d'accessibilité</h1>
