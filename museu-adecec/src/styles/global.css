@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Josefin+Sans:wght@400;600;700&display=swap');
+
+/*
+  GLOBAL.CSS — Variables et styles de base du site ADECEC Musée.
+  Ce fichier est la seule source de vérité pour les couleurs, polices,
+  animations et règles globales du projet.
+*/
+:root {
+  --color-header-footer: #133951;
+  --color-card-bg: #263e6a;
+  --color-page-bg: #f8f7f3;
+  --color-hover: #fedc97;
+  --color-btn-top-bg: #ffbb33;
+  --color-btn-top-icon: #1c2b24;
+  --color-arch-green: #3d4f3c;
+  --color-arch-dark: #1c2b24;
+  --color-text-main: #1c2b24;
+  --color-text-light: #ffffff;
+  --color-border-soft: rgba(28, 43, 36, 0.16);
+
+  --font-title: 'Josefin Sans', sans-serif;
+  --font-body: 'Caudex', serif;
+
+  --container-width: 1200px;
+  --section-space: 4rem;
+  --card-radius: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-page-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+a:hover {
+  color: var(--color-hover);
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell,
+.navbar,
+.pre-footer__grid,
+.site-footer__top,
+.site-footer__bottom,
+.home-hero,
+.card-grid-section,
+.about-page,
+.arch-page,
+.basic-page {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+/*
+  Bouton réutilisable.
+  Cette classe sert autant pour les vrais boutons que pour les liens jouant
+  le rôle de call-to-action.
+*/
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-light);
+  font-family: var(--font-title);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.btn:hover {
+  background-color: var(--color-hover);
+  color: var(--color-arch-dark);
+}
+
+/*
+  Header et navigation.
+  Le fond et la typographie reprennent exactement l'intention du brief.
+*/
+.site-header {
+  background-color: var(--color-header-footer);
+  color: var(--color-text-light);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 80px;
+  padding: 1rem 0;
+  font-family: var(--font-title);
+}
+
+.site-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a.active {
+  color: var(--color-hover);
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/*
+  Animation hero accueil.
+  L'image entre depuis le haut au chargement de la page.
+*/
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  animation: slideDown 0.8s ease forwards;
+  border-radius: 0 0 24px 24px;
+}
+
+/*
+  Animation image archéologie.
+  La classe .is-visible est ajoutée par React quand l'image entre dans le viewport.
+*/
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.arch-img {
+  opacity: 0;
+}
+
+.arch-img.is-visible {
+  animation: slideInRight 0.7s ease forwards;
+}
+
+/*
+  Mise en page générale des sections.
+*/
+.page-shell {
+  padding-block: 2rem 0;
+}
+
+.home-page,
+.about-page,
+.arch-page,
+.basic-page {
+  padding-block: var(--section-space);
+}
+
+.home-hero {
+  display: grid;
+  gap: 2rem;
+}
+
+.home-hero__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-hero__content h1,
+.about-page h1,
+.arch-page h1,
+.basic-page h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.card-grid-section {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: var(--section-space);
+}
+
+.card-grid-section h2,
+.about-page h2,
+.arch-page h2,
+.pre-footer h2 {
+  font-family: var(--font-title);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-card-bg);
+  color: var(--color-text-light);
+  border-radius: var(--card-radius);
+}
+
+.info-card__image {
+  border-radius: 12px;
+}
+
+/*
+  Page À Propos.
+*/
+.breadcrumb {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-title);
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-intro__aside img {
+  border-radius: var(--card-radius);
+}
+
+.about-intro__content {
+  display: grid;
+  gap: 2rem;
+}
+
+.text-media-section {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.text-media-section img {
+  border-radius: 14px;
+}
+
+.about-intro hr {
+  border: none;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+/*
+  Page Archéologie.
+*/
+.arch-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.arch-hero__shapes {
+  position: relative;
+  min-height: 320px;
+}
+
+.arch-rect-main,
+.arch-rect-dark {
+  position: absolute;
+}
+
+.arch-rect-main {
+  inset: 2rem 4rem 0 0;
+  background: var(--color-arch-green);
+  border-radius: 0 0 37px 0;
+}
+
+.arch-rect-dark {
+  inset: 0 0 3rem 7rem;
+  background: var(--color-arch-dark);
+  border-radius: 0 25px 0 0;
+}
+
+.arch-hero__media img {
+  width: 100%;
+  border-radius: var(--card-radius);
+  position: relative;
+  z-index: 2;
+}
+
+.arch-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.arch-section img {
+  border-radius: var(--card-radius);
+}
+
+.arch-section--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+  Pre-footer et footer.
+*/
+.pre-footer {
+  padding-block: var(--section-space);
+}
+
+.pre-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.pre-footer__column {
+  display: grid;
+  gap: 1rem;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding-block: 2rem;
+  background: var(--color-header-footer);
+  color: var(--color-text-light);
+}
+
+.site-footer__top,
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.8rem;
+}
+
+.site-footer__socials,
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#dark-mode-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+/*
+  Bouton retour en haut.
+  Il apparaît seulement après 300px de scroll, logique gérée côté React.
+*/
+.scroll-top-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-btn-top-bg);
+  color: var(--color-btn-top-icon);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/*
+  Responsive.
+  Sur mobile, on masque la navigation horizontale et on affiche le hamburger.
+*/
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-area {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--color-header-footer);
+    border-radius: 14px;
+  }
+
+  .nav-area.is-open {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-grid,
+  .about-intro,
+  .text-media-section,
+  .arch-hero,
+  .arch-section,
+  .pre-footer__grid,
+  .site-footer__top,
+  .site-footer__bottom {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .hero-img {
+    height: 42vh;
+  }
+
+  .scroll-top-btn {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
