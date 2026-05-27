@@ -1,7 +1,8 @@
 /*
   Le footer regroupe les informations institutionnelles et les liens secondaires.
   Le bouton dark mode reste volontairement un placeholder tant que la logique
-  de changement de thème n'a pas encore été définie.
+  de changement de thème n'a pas encore été définie. Il est en commentaires pour l'instant, mais si vous souhaitez
+  faire un dark mode il est déjà là.
 */
 export default function Footer() {
   return (
@@ -30,13 +31,13 @@ export default function Footer() {
           <a href="#">Crédits</a>
         </div>
 
-        <button
+        {/* <button
           type="button"
           id="dark-mode-toggle"
           aria-label="Changer de thème"
         >
           ◐
-        </button>
+        </button>} */}
       </div>
     </footer>
   );

@@ -6,9 +6,21 @@
 export default function ToggleGroupLangue() {
   return (
     <div className="language-switcher" aria-label="Sélecteur de langue">
-      <button type="button" className="language-btn">FR</button>
-      <button type="button" className="language-btn">CO</button>
-      <button type="button" className="language-btn">EN</button>
+      <label> PLACEHOLDER</label>
+      <select>
+        <option className="language-btn" value="fr">
+          🇫🇷
+        </option>
+
+        <option className="language-btn" value="co">
+          🇨o
+        </option>
+
+
+        <option className="language-btn" value="en">
+          🇬🇧
+        </option>
+      </select>
     </div>
   );
 }
