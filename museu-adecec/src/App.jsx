@@ -5,6 +5,7 @@ import APropos from './pages/APropos';
 import Archeologie from './pages/Archeologie';
 import LesSalles from './pages/LesSalles';
 import InfosPratiques from './pages/InfosPratiques';
+import Accessibilite from './pages/Accessibilite';
 import NotFound from './pages/NotFound';
 
 /*
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/archeologie" element={<Archeologie />} />
         <Route path="/les-salles" element={<LesSalles />} />
         <Route path="/infos-pratiques" element={<InfosPratiques />} />
+        <Route path="/accessibilite" element={<Accessibilite />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

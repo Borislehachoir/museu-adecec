@@ -5,6 +5,8 @@
 :root {
   --color-header-footer: #133951;
   --color-card-bg: #263e6a;
+  --color-card-bg-2:#6B7E88;
+  --color-btn-bg : #FFF7E7;
   --color-page-bg: #f8f7f3;
   --color-hover: #fedc97;
   --color-btn-top-bg: #ffbb33;
@@ -23,6 +25,26 @@
   --card-radius: 18px;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-card-bg-2);
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--color-arch-green);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-hover);
+    border-radius: 4px;
+}
+
 *,
 *::before,
 *::after {
@@ -37,7 +59,11 @@ body {
   color: var(--color-text-main);
   line-height: 1.6;
 }
-
+h1, h2 {
+  font-family: var(--font-title);
+  color: var(--color-text-main);
+  margin: 0;
+}
 img {
   display: block;
   max-width: 100%;
@@ -72,19 +98,19 @@ button {
   margin-inline: auto;
 }
 
-/*
-  Bouton réutilisable.
-  Note : Cette classe sert autant pour les vrais boutons que pour les liens CTA 
-*/
+/* Bouton principal (genre celui qu'on retrouve quasi partout). 
+ Note : Cette classe sert autant pour les vrais boutons que pour les liens CTA */
 .btn {
   display: inline-block;
-  padding: 0.7rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  background-color: var(--color-card-bg);
-  color: var(--color-text-light);
+  background-color: var(--color-btn-bg);
+  color: var(--color-text-main);
   font-family: var(--font-title);
   cursor: pointer;
   transition: background-color 180ms ease, color 180ms ease;
+  max-width : 90px;
+  border-radius: 20px;
 }
 
 .btn:hover {
@@ -92,9 +118,7 @@ button {
   color: var(--color-arch-dark);
 }
 
-/*
-  Header & barre de navigation.
-*/
+/*Header & barre de navigation.*/
 .site-header {
   background-color: var(--color-header-footer);
   color: var(--color-text-light);
@@ -156,48 +180,47 @@ button {
 /* GRANDE IMAGE PAGE D'ACCUEIL */
 
 .big-pic {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  overflow: visible;
 }
 
 .hewwo-picture {
-  flex: 7 1 0%;
   position: relative;
-  display: flex;
-  align-items: flex-end;
+  min-height: 70vh;
 }
 
 .hewwo-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 
 .hewwo-text {
   position: absolute;
   left: 4%;
-  bottom: 8%;
+  bottom: 2rem;
   margin: 0;
   color: #fff;
   font-size: clamp(2rem, 5vw, 4rem);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .hewwo-p {
-  flex: 3 1 0%;
   display: flex;
   align-items: center;
-  padding-left: 4%;
   gap: 1rem;
+  padding-inline: 4%;
 }
 
 .hewwo-p p {
+  max-width: 80%;
   margin: 0;
-  max-width: 65ch;
 }
+
 
 @media (max-width:700px) {
   .big-pic {
@@ -219,7 +242,6 @@ button {
     left: 3%
   }
 }
-
 
 /*
   Animation images dans main de l'accueil.
@@ -271,7 +293,7 @@ button {
 
 /* Mise en page générale des sections. */
 .page-shell {
-  padding-block: 2rem 0;
+  padding-block: 0;
 }
 
 .home-page,
@@ -299,10 +321,16 @@ button {
   font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
+/* Grille de cartes */
+
 .card-grid-section {
   display: grid;
   gap: 1.5rem;
   padding-block: var(--section-space);
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-top: 0;
 }
 
 .card-grid-section h2,
@@ -314,26 +342,55 @@ button {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .info-card {
-  display: grid;
-  gap: 1rem;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
   padding: 1.25rem;
-  background: var(--color-card-bg);
+  background-color: var(--color-card-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--color-text-light);
   border-radius: var(--card-radius);
+  overflow: hidden;
+  position: relative;
 }
 
-.info-card__image {
+.info-card__overlay {
+  width: min(420px-1.5rem);
+  display: grid;
+  gap: 0.8rem;
+  padding: 2rem;
+  background: var(--color-card-bg);
+  color: var(--color-text-light);
   border-radius: 12px;
 }
 
-/*
-  Page À Propos.
-*/
+.info-card__overlay h3 {
+  font-family: var(--font-title);
+  margin: 0;
+}
+
+.info-card__overlay p {
+  margin: 0;
+}
+
+
+.info-card:nth-child(odd) .info-card__overlay {
+  margin-right: auto;
+}
+
+.info-card:nth-child(even) .info-card__overlay {
+  margin-left: auto;
+}
+
+/* À Propos */
 .breadcrumb {
   margin-bottom: 1.5rem;
   font-family: var(--font-title);
@@ -436,15 +493,30 @@ button {
 
 .pre-footer__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-.pre-footer__column {
+.ligne {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-header-footer);
+  margin-inline: 15px 30px;
+}
+
+.pre-footer__content {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr 8px 1fr;
+  align-items: start;
+  gap: 10px;
 }
 
+.ligne-2 {
+  width: 8px;
+  height: 100%;
+  min-height: 140px;
+  background-color: var(--color-header-footer);
+}
 .site-footer {
   margin-top: 2rem;
   padding-block: 2rem;
@@ -498,6 +570,7 @@ button {
   font-size: 1.4rem;
   cursor: pointer;
 }
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .hamburger {

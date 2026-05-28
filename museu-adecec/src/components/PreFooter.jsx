@@ -4,32 +4,37 @@
 */
 export default function PreFooter() {
   return (
-    <section className="pre-footer" aria-labelledby="pre-footer-title">
+    <section className="pre-footer">
       <div className="pre-footer__grid">
-        <div className="pre-footer__column">
-          <h2 id="pre-footer-title">Préparer votre visite</h2>
+        <div className="ligne" />
 
-          <div className="map-wrapper">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.1557262392939!2d9.490844277628387!3d42.331649508021854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d74323023b6a83%3A0xf8b953f76c42151c!2sAdecec%20-%20Radio%20Voce%20Nustrale%20-%20Mus%C3%A9e%20Ethnographique!5e1!3m2!1sfr!2sfr!4v1779807875253!5m2!1sfr!2sfr"
-              width="100%"
-              height="260"
-              style={{ border: '10px solid transparent' }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation du musée ADECEC sur Google Maps"
-            />
+        <div className="pre-footer__content">
+          <div className="pre-footer__column">
+            <h2>Préparer votre visite</h2>
+            <div className="map-wrapper">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=9.489655494689941%2C42.33062521699003%2C9.492166042327883%2C42.332084599761224&amp;layer=mapnik&amp;marker=42.331354912608255%2C9.490910768508911"
+                width="100%"
+                height="260"
+                style={{ border: '10px solid transparent' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation du musée ADECEC à Cervione, sur OpenStreetMap"
+              />
+            </div>
+
+            <p>Lundi au samedi, 9h–12h et 14h–18h.</p>
           </div>
 
-          <p>Lundi au samedi, 9h–12h et 14h–18h.</p>
-        </div>
+          <div className="ligne-2" />
 
-        <div className="pre-footer__column">
-          <h2>Informations pratiques</h2>
-          <p>Adresse : 8 rue Philippe Pescetti, 20221 Cervione.</p>
-          <p>Téléphone : 04 95 38 12 83.</p>
-          <p>Ajoute ici ensuite les tarifs, l’accessibilité et les conditions de visite.</p>
+          <div className="pre-footer__column">
+            <h2>Informations pratiques</h2>
+            <p>Adresse : 8 rue Philippe Pescetti, 20221 Cervione.</p>
+            <p>Téléphone : 04 95 38 12 83.</p>
+            <p>Ajoute ici ensuite les tarifs, l’accessibilité et les conditions de visite.</p>
+          </div>
         </div>
       </div>
     </section>

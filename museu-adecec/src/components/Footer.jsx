@@ -16,19 +16,19 @@ export default function Footer() {
         </div>
 
         <div className="site-footer__socials">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="X">X</a>
+          <a href="https://www.instagram.com/adecec_voce_nustrale/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.facebook.com/vocenustrale.adecec/?locale=fr_FR" aria-label="Facebook">Facebook</a>
+          <a href="https://x.com/adecec" aria-label="X">X</a>
         </div>
       </div>
 
       <div className="site-footer__bottom">
         <div className="site-footer__links">
-          <a href="#">Nous contacter</a>
-          <a href="#">Plan du site</a>
-          <a href="#">Accessibilité</a>
-          <a href="#">Mentions légales</a>
-          <a href="#">Crédits</a>
+          <a href="infos-pratiques">Nous contacter</a>
+          <a href="placeholder">Plan du site</a>
+          <a href="accessibilite">Accessibilité</a>
+          <a href="https://adecec.net/adecec/cuntattu.php#legal"> Mentions légales</a>
+          <a href="placeholder">Crédits</a>
         </div>
 
         {/* <button
