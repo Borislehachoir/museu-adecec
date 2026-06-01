@@ -25,7 +25,7 @@ export default function LesSalles() {
             <div className="info-card__overlay">
               <h3>Cathédrale</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p>
               <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="btn">

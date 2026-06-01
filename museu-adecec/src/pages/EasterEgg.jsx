@@ -34,9 +34,9 @@ export default function EasterEgg() {
                 break;
 
             case 'random':
-                response = Math.floor(Math.round (Math.random() * 100)) + (Math.random());
-                if (response > 50) {response = null;}
-                else {response = 'Vostru N°: ' + response;}
+                response = Math.floor(Math.round(Math.random() * 100)) + (Math.random());
+                if (response > 50) { response = null; }
+                else { response = 'Vostru N°: ' + response; }
                 break;
 
             case 'clear':
@@ -87,15 +87,15 @@ export default function EasterEgg() {
                 Félicitations ! <br />
                 ... <br />
                 Qu'est-ce que vous attendez ? Il n'y a rien d'autre à voir ici. Ah, c'est ce que vous voyez en dessous qui vous intrigue ?
-                C'est vrai qu'il y a un petit secret. Mais pour le découvrir, il faut trouver un mot. 
-            </p>  <br/>  <br/>
+                C'est vrai qu'il y a un petit secret. Mais pour le découvrir, il faut trouver un mot.
+            </p>  <br />  <br />
 
             <h2>Indices: </h2>
             <list>
                 <li>Rien n'est aléatoire.</li>
                 <li>Avez-vous bien lu ? </li>
                 <li>Quel jour sommes-nous ? (6 chances sur 7 de vous tromper)</li>
-                <br/>
+                <br />
             </list>
             <ProgressBar mode="indeterminate" style={{ height: '6px', backgroundColor: '#fedc97', borderColor: '#3d4f3c', }}></ProgressBar>
             <div className="card terminal-demo">
