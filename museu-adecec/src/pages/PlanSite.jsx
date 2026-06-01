@@ -1,7 +1,4 @@
-/*
-  Cette page est volontairement minimale.
-  Elle sert de point d'ancrage de route avant intégration du vrai contenu.
-*/
+
 import { useState } from 'react';
 import { TreeSelect } from 'primereact/treeselect';
 import "primereact/resources/themes/lara-light-cyan/theme.css";

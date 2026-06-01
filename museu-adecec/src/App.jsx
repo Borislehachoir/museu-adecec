@@ -12,8 +12,7 @@ import EasterEgg from './pages/EasterEgg';
 
 /*
   Ce composant centralise les routes.
-  Le Layout englobe toutes les pages afin d'éviter de répéter
-  la navbar, le pre-footer, le footer et le bouton de retour en haut.
+  Le Layout, lui, englobe toutes les pages afin d'éviter de répéter la navbar, le pre-footer, le footer et le bouton de retour en haut.
 */
 export default function App() {
   return (
