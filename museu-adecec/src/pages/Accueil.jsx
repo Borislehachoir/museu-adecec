@@ -57,7 +57,6 @@ export default function Accueil() {
           </p>
         </div>
       </div>
-      {/* Commentaires */}
 
       <div className="card-grid">
         {cards.map((card, index) => {
