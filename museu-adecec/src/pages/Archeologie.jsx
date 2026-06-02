@@ -2,14 +2,13 @@ import { useEffect, useRef } from 'react';
 import kayou from '../assets/kayouadecec.png';
 import storia from '../assets/storiaarcheo.jpg';
 import creusets from '../assets/creusets.png';
-// ❌ import '../js/script-archeo.js'; — supprimé
 
 export default function Archeologie() {
   const heroImageRef = useRef(null);
   const missionImageRef = useRef(null);
   const histoireImageRef = useRef(null);
 
-  // ✅ Animation hero — slide in (IntersectionObserver)
+  // Animation slide in
   useEffect(() => {
     const currentImage = heroImageRef.current;
     if (!currentImage) return;
@@ -26,7 +25,7 @@ export default function Archeologie() {
     return () => observer.disconnect();
   }, []);
 
-  // ✅ Animation missions — zoom au scroll
+  // Animation missions ça scroll qd on zoom
   useEffect(() => {
     const currentImage = missionImageRef.current;
     if (!currentImage) return;
@@ -52,7 +51,7 @@ export default function Archeologie() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ Animation histoire — slide in left (IntersectionObserver)
+  // Animation histoire — slide in left
   useEffect(() => {
     const currentImage = histoireImageRef.current;
     if (!currentImage) return;
@@ -75,7 +74,7 @@ export default function Archeologie() {
       <div className="arch-hero">
         <div className="arch-hero__content">
           <h1>Archéologie</h1>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <img
           ref={heroImageRef}
@@ -89,7 +88,7 @@ export default function Archeologie() {
       <div className="arch-section arch-section--missions">
         <div className="arch-section__content">
           <h2>Missions</h2>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <img
           ref={missionImageRef}
@@ -109,7 +108,7 @@ export default function Archeologie() {
         />
         <div className="arch-section__content">
           <h2>Histoire</h2>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </section>

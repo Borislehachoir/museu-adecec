@@ -1,7 +1,3 @@
-/*
-  La page À Propos présente le contexte du musée dans une mise en page éditoriale.
-  Le breadcrumb aide l'utilisateur à se repérer dans l'arborescence.
-*/
 import museu from '../assets/museu.png';
 import museeExterieur from '../assets/museuexterieur.jpg';
 import cathedrale from '../assets/cathedrale.png';
@@ -9,13 +5,15 @@ import cathedrale from '../assets/cathedrale.png';
 export default function APropos() {
   return (
     <section className="about-page">
-      <nav aria-label="breadcrumb" className="breadcrumb">
-        Musée / <span>À Propos</span>
-      </nav>
+      <div className="breadcrumb">Musée / À Propos</div>
 
-      <section className="about-intro">
+      <div className="about-intro">
         <aside className="about-intro__aside">
-          <img src={cathedrale} alt="Vue extérieure du musée ADECEC" />
+          <img
+            src={cathedrale}
+            alt="Église"
+            className="about-img about-img--cathedrale"
+          />
         </aside>
 
         <div className="about-intro__content">
@@ -28,7 +26,12 @@ export default function APropos() {
                 son ancrage local et son rôle culturel.
               </p>
             </div>
-            <img src={museu} alt="Image secondaire liée à la fondation" />
+
+            <img
+              src={museu}
+              alt="Intérieur du musée"
+              className="about-img about-img--museu"
+            />
           </section>
 
           <hr />
@@ -41,10 +44,15 @@ export default function APropos() {
                 et l’expérience proposée au public.
               </p>
             </div>
-            <img src={museeExterieur} alt="Image secondaire liée au musée" />
+
+            <img
+              src={museeExterieur}
+              alt="Extérieur du musée"
+              className="about-img about-img--musee-exterieur"
+            />
           </section>
         </div>
-      </section>
+      </div>
     </section>
   );
 }

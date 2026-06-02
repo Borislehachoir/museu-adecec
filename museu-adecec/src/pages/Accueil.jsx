@@ -5,14 +5,12 @@ import image2 from '../assets/storiaarcheo.jpg';
 import image3 from '../assets/kayouadecec.png';
 import image4 from '../assets/cervione.png';
 import museeExterieur from '../assets/museuexterieur.jpg';
-// ❌ Plus besoin : import '../js/script-accueil.js';
 
 export default function Accueil() {
   const bigPicRef = useRef(null);
   const hewwoPictureRef = useRef(null);
   const hewwoTextRef = useRef(null);
 
-  // ✅ Le script est intégré ici directement
   useEffect(() => {
     const bigPic = bigPicRef.current;
     const hewwoText = hewwoTextRef.current;
@@ -49,13 +47,12 @@ export default function Accueil() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // appel initial
+    handleScroll();
 
-    // ✅ Nettoyage quand le composant se démonte
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // [] = s'exécute une seule fois au montage
+  }, []);
 
   const cards = [
     {
