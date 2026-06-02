@@ -2,31 +2,80 @@ import { useEffect, useRef } from 'react';
 import kayou from '../assets/kayouadecec.png';
 import storia from '../assets/storiaarcheo.jpg';
 import creusets from '../assets/creusets.png';
-import '../js/script-archeo.js';
+// ❌ import '../js/script-archeo.js'; — supprimé
 
-/*
-  IntersectionObserver est utilisé ici pour déclencher l'animation uniquement
-  quand l'image entre dans le viewport, ce qui est plus propre et plus performant
-  qu'un calcul manuel sur chaque événement de scroll.
-*/
 export default function Archeologie() {
   const heroImageRef = useRef(null);
   const missionImageRef = useRef(null);
   const histoireImageRef = useRef(null);
 
+  // ✅ Animation hero — slide in (IntersectionObserver)
   useEffect(() => {
-    // script-archeo.js est importé depuis src/js et exécuté au montage
+    const currentImage = heroImageRef.current;
+    if (!currentImage) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        currentImage.classList.add('is-visible');
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(currentImage);
+    return () => observer.disconnect();
+  }, []);
+
+  // ✅ Animation missions — zoom au scroll
+  useEffect(() => {
+    const currentImage = missionImageRef.current;
+    if (!currentImage) return;
+
+    const handleScroll = () => {
+      const rect = currentImage.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      const imageCenter = rect.top + rect.height / 2;
+      const startZoom = windowHeight;
+      const endZoom = windowHeight / 2;
+
+      let progress = (startZoom - imageCenter) / (startZoom - endZoom);
+      progress = Math.max(0, Math.min(1, progress));
+
+      const scale = 0.1 + progress * 0.9;
+      currentImage.style.transform = `scale(${scale})`;
+      currentImage.style.opacity = progress > 0 ? 1 : 0;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // ✅ Animation histoire — slide in left (IntersectionObserver)
+  useEffect(() => {
+    const currentImage = histoireImageRef.current;
+    if (!currentImage) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        currentImage.classList.add('slide-in-left');
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(currentImage);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section className="arch-page">
-      {/* Hero Section - Archéologie */}
+      {/* Hero Section */}
       <div className="arch-hero">
         <div className="arch-hero__content">
           <h1>Archéologie</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <img
           ref={heroImageRef}
@@ -40,9 +89,7 @@ export default function Archeologie() {
       <div className="arch-section arch-section--missions">
         <div className="arch-section__content">
           <h2>Missions</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
         <img
           ref={missionImageRef}
@@ -57,14 +104,12 @@ export default function Archeologie() {
         <img
           ref={histoireImageRef}
           src={creusets}
-          alt=" j'ai un petit creus...et pas vous ?"
+          alt="j'ai un petit creus...et pas vous ?"
           className="arch-img"
         />
         <div className="arch-section__content">
           <h2>Histoire</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>Lorem ipsum dolor sit amet...</p>
         </div>
       </div>
     </section>
