@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import motifOrange from '../assets/motiforange.png';
 import groupeImg from '../assets/museuexterieur.jpg';
 
@@ -24,40 +25,180 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
   );
 }
 
+const infosTexts = {
+  fr: {
+    breadcrumbParent: 'Musée / ',
+    breadcrumbCurrent: 'Informations pratiques',
+    horairesTitle: 'Horaires',
+    period1Title: 'Période 1',
+    period1Text:
+      'Ceci est un texte pour des horaires spécifiques avec un textecourt et un textecourt et un textecourt et un textecourt.',
+    period2Title: 'Période 2',
+    period2Text:
+      'Ceci est un texte pour des horaires spécifiques avec un textecourt et un textecourt et un textecourt et un textecourt.',
+
+    groupsTitle: 'Groupes et scolaires',
+    groupsIntro:
+      'Ceci est un texte ceci est un textececi est un textceci est un textececi est un textececi est un textececi est un textececi.',
+
+    tarifsTitle: 'Tarifs',
+    faqTitle: 'FAQ',
+
+    tarifs: [
+      {
+        title: 'Tarif 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Tarif 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+
+    faq: [
+      {
+        title: 'Question 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Question 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Question 3',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+  },
+
+  en: {
+    breadcrumbParent: 'Museum / ',
+    breadcrumbCurrent: 'Practical information',
+    horairesTitle: 'Opening hours',
+    period1Title: 'Period 1',
+    period1Text:
+      'This is a text for specific opening hours with a short text and a short text and a short text and a short text.',
+    period2Title: 'Period 2',
+    period2Text:
+      'This is a text for specific opening hours with a short text and a short text and a short text and a short text.',
+
+    groupsTitle: 'Groups and schools',
+    groupsIntro:
+      'This is a text this is a textthis is a textthis is a textthis is a textthis is a textthis is a textthis.',
+
+    tarifsTitle: 'Prices',
+    faqTitle: 'FAQ',
+
+    tarifs: [
+      {
+        title: 'Price 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Price 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+
+    faq: [
+      {
+        title: 'Question 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Question 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Question 3',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+  },
+
+  co: {
+    breadcrumbParent: 'Museu / ',
+    breadcrumbCurrent: 'Infurmazione pratiche',
+    horairesTitle: 'Urarii',
+    period1Title: 'Periodu 1',
+    period1Text:
+      'Quessu hè un testu per urarii specifichi cù un testu cortu è un testu cortu è un testu cortu è un testu cortu.',
+    period2Title: 'Periodu 2',
+    period2Text:
+      'Quessu hè un testu per urarii specifichi cù un testu cortu è un testu cortu è un testu cortu è un testu cortu.',
+
+    groupsTitle: 'Gruppi è scole',
+    groupsIntro:
+      'Quessu hè un testu quessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquì.',
+
+    tarifsTitle: 'Tariffe',
+    faqTitle: 'FAQ',
+
+    tarifs: [
+      {
+        title: 'Tariffa 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Tariffa 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+
+    faq: [
+      {
+        title: 'Dumanda 1',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Dumanda 2',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        title: 'Dumanda 3',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    ],
+  },
+};
+
 export default function InfosPratiques() {
   const [openTarif, setOpenTarif] = useState(0);
   const [openFaq, setOpenFaq] = useState(2);
+  const [lang, setLang] = useState('fr');
 
-  const tarifs = [
-    {
-      title: 'Tarif 1',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      title: 'Tarif 2',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-  ];
+  useEffect(() => {
+    const select = document.getElementById('language-select');
+    if (!select) return;
 
-  const faq = [
-    {
-      title: 'Question 1',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      title: 'Question 2',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      title: 'Question 3',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-  ];
+    const updateLang = () => {
+      setLang(select.value || 'fr');
+    };
+
+    updateLang();
+    select.addEventListener('change', updateLang);
+
+    return () => {
+      select.removeEventListener('change', updateLang);
+    };
+  }, []);
+
+  const t = infosTexts[lang];
 
   return (
     <section className="infos-page">
@@ -71,37 +212,28 @@ export default function InfosPratiques() {
 
         <div className="infos-content">
           <div className="infos-breadcrumb">
-            <span>Musée / </span>
-            <strong>Informations pratiques</strong>
+            <span>{t.breadcrumbParent}</span>
+            <strong>{t.breadcrumbCurrent}</strong>
           </div>
 
           <div className="infos-grid">
             <article className="infos-card infos-card--dark">
-              <h2>Horaires</h2>
+              <h2>{t.horairesTitle}</h2>
 
               <div className="infos-text-block">
-                <h3>Période 1</h3>
-                <p>
-                  Ceci est un texte pour des horaires spécifiques avec un textecourt
-                  et un textecourt et un textecourt et un textecourt.
-                </p>
+                <h3>{t.period1Title}</h3>
+                <p>{t.period1Text}</p>
               </div>
 
               <div className="infos-text-block">
-                <h3>Période 2</h3>
-                <p>
-                  Ceci est un texte pour des horaires spécifiques avec un textecourt
-                  et un textecourt et un textecourt et un textecourt.
-                </p>
+                <h3>{t.period2Title}</h3>
+                <p>{t.period2Text}</p>
               </div>
             </article>
 
             <article className="infos-card infos-card--soft">
-              <h2>Groupes et scolaires</h2>
-              <p className="infos-card__intro">
-                Ceci est un texte ceci est un textececi est un textceci est un textececi
-                est un textececi est un textececi est un textececi.
-              </p>
+              <h2>{t.groupsTitle}</h2>
+              <p className="infos-card__intro">{t.groupsIntro}</p>
 
               <div className="infos-card__image-wrap">
                 <img src={groupeImg} alt="Accueil de groupes au musée" />
@@ -109,28 +241,26 @@ export default function InfosPratiques() {
             </article>
 
             <article className="infos-card infos-card--soft">
-              <h2>Tarifs</h2>
+              <h2>{t.tarifsTitle}</h2>
 
               <div className="infos-accordion-list">
-                {tarifs.map((item, index) => (
+                {t.tarifs.map((item, index) => (
                   <AccordionItem
                     key={item.title}
                     title={item.title}
                     content={item.content}
                     isOpen={openTarif === index}
-                    onToggle={() =>
-                      setOpenTarif(openTarif === index ? null : index)
-                    }
+                    onToggle={() => setOpenTarif(openTarif === index ? null : index)}
                   />
                 ))}
               </div>
             </article>
 
             <article className="infos-card infos-card--dark">
-              <h2>FAQ</h2>
+              <h2>{t.faqTitle}</h2>
 
               <div className="infos-accordion-list">
-                {faq.map((item, index) => (
+                {t.faq.map((item, index) => (
                   <AccordionItem
                     key={item.title}
                     title={item.title}

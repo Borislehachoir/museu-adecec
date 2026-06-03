@@ -80,29 +80,39 @@ export default function EasterEgg() {
                     }
                 }`}
             </style>
-            <h1>Vous m'avez trouvé ? </h1>
-            <p>
+            <h1 id="ee-title">Vous m'avez trouvé ?</h1>
+
+            <p id="ee-desc">
                 Bien le bonjour !
                 Si vous êtes ici, c'est soit que vous avez eu une chance incroyable, soit que vous avez réfléchi avec votre tête.
                 Félicitations ! <br />
                 ... <br />
                 Qu'est-ce que vous attendez ? Il n'y a rien d'autre à voir ici. Ah, c'est ce que vous voyez en dessous qui vous intrigue ?
                 C'est vrai qu'il y a un petit secret. Mais pour le découvrir, il faut trouver un mot.
-            </p>  <br />  <br />
+            </p>
 
-            <h2>Indices: </h2>
-            <list>
-                <li>Rien n'est aléatoire.</li>
-                <li>Avez-vous bien lu ? </li>
-                <li>Quel jour sommes-nous ? (6 chances sur 7 de vous tromper)</li>
-                <br />
-            </list>
-            <ProgressBar mode="indeterminate" style={{ height: '6px', backgroundColor: '#fedc97', borderColor: '#3d4f3c', }}></ProgressBar>
+            <br />
+            <br />
+
+            <h2 id="ee-guess">Indices :</h2>
+
+            <ul>
+                <li id="ee-guess-1">Rien n'est aléatoire.</li>
+                <li id="ee-guess-2">Avez-vous bien lu ?</li>
+                <li id="ee-guess-3">Quel jour sommes-nous ? (6 chances sur 7 de vous tromper)</li>
+            </ul>
+
+            <ProgressBar
+                mode="indeterminate"
+                style={{ height: '6px', backgroundColor: '#fedc97', borderColor: '#3d4f3c' }}
+            ></ProgressBar>
+
             <div className="card terminal-demo">
-                <h3>U Terminal</h3>
-                <p>
+                <h3 id="ee-term-title">U Terminal</h3>
+                <p id="ee-term-desc">
                     Stampittà "<strong>date</strong>" to display the current date, "<strong>greet {'{0}'}</strong>" for a message, "<strong>random</strong>" to get a random number and "<strong>clear</strong>" to clear all commands.
                 </p>
+
                 <Terminal
                     welcomeMessage="Benvenutu su l'AdececShell."
                     prompt="adecec -c"

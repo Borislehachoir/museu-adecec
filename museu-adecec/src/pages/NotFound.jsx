@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 export default function NotFound() {
   return (
     <section className="basic-page">
-      <h1>Erreur 404 - Page introuvable</h1>
-      <Link to="/" className="btn">
+      <h1 id="nf-t">Erreur 404 - Page introuvable</h1>
+      <Link to="/" className="btn" id="nf-btn">
         Retour à l’accueil
       </Link>
     </section>

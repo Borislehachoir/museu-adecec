@@ -10,7 +10,7 @@ export default function PreFooter() {
 
         <div className="pre-footer__content">
           <div className="pre-footer__column">
-            <h2>Préparer votre visite</h2>
+            <h2 id="pf-title">Préparer votre visite</h2>
             <div className="map-wrapper">
               <iframe
                 src="https://www.openstreetmap.org/export/embed.html?bbox=9.489655494689941%2C42.33062521699003%2C9.492166042327883%2C42.332084599761224&amp;layer=mapnik&amp;marker=42.331354912608255%2C9.490910768508911"
@@ -24,16 +24,16 @@ export default function PreFooter() {
               />
             </div>
 
-            <p>Lundi au samedi, 9h–12h et 14h–18h.</p>
+            <p id="pf-hours">Lundi au samedi, 9h–12h et 14h–18h.</p>
           </div>
 
           <div className="ligne-2" />
 
           <div className="pre-footer__column">
-            <h2>Informations pratiques</h2>
-            <p>Adresse : 8 rue Philippe Pescetti, 20221 Cervione.</p>
-            <p>Téléphone : 04 95 38 12 83.</p>
-            <p>Ajoute ici ensuite les tarifs, l’accessibilité et les conditions de visite.</p>
+            <h2 id="pf-info">Informations pratiques</h2>
+            <p id="pf-address">Adresse : 8 rue Philippe Pescetti, 20221 Cervione.</p>
+            <p id="pf-phone">Téléphone : 04 95 38 12 83.</p>
+            <p id="pf-text">Ajoute ici ensuite les tarifs, l'accessibilité et les conditions de visite.</p>
           </div>
         </div>
       </div>

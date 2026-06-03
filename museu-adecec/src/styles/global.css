@@ -127,6 +127,41 @@ button {
   color: var(--color-text-light);
 }
 
+.site-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+  border-radius: 8px;
+  transition: opacity 180ms ease, transform 180ms ease;
+  margin-left: 15px;
+}
+
+.site-logo-link:hover {
+  opacity: 0.9;
+  transform: scale(1.04);
+  color: inherit;
+}
+
+.site-logo-box {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 25px;
+
+}
+
+.site-logo {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+}
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -135,11 +170,6 @@ button {
   min-height: 80px;
   padding: 1rem 0;
   font-family: var(--font-title);
-}
-
-.site-logo {
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 .nav-area {
@@ -159,16 +189,103 @@ button {
 }
 
 .language-switcher {
-  display: flex;
-  gap: 0.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
-.language-btn {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: transparent;
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 56px;
+  min-height: 40px;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background-color: var(--color-header-footer);
   color: var(--color-text-light);
-  padding: 0.35rem 0.55rem;
   cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.language-toggle:hover {
+  background-color: var(--color-hover);
+  border-color: var(--color-hover);
+  color: var(--color-arch-dark);
+}
+
+.language-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(254, 220, 151, 0.25);
+}
+
+.language-toggle__chevron {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 30;
+  display: grid;
+  gap: 0.35rem;
+  min-width: 64px;
+  padding: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background-color: var(--color-header-footer);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.language-menu__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 0.35rem;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.language-menu__item:hover {
+  background-color: var(--color-hover);
+}
+
+.language-menu__item.is-active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.language-menu__item.is-active:hover {
+  background-color: var(--color-hover);
+}
+
+.language-flag {
+  display: block;
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.language-flag--current {
+  width: 24px;
+  height: 18px;
 }
 
 .hamburger {
@@ -461,6 +578,7 @@ button {
   margin-bottom: 1.5rem;
   font-family: var(--font-title);
 }
+
 .about-intro {
   display: grid;
   grid-template-columns: 0.9fr 1.4fr;
@@ -705,6 +823,7 @@ button {
   background-position: top center;
   background-size: 90px auto;
 }
+
 .infos-content {
   min-width: 0;
   width: 100%;
@@ -715,7 +834,7 @@ button {
   color: var(--color-header-footer);
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
-} 
+}
 
 .infos-grid {
   display: grid;
@@ -755,7 +874,7 @@ button {
   line-height: 1.45;
 }
 
-.infos-text-block + .infos-text-block {
+.infos-text-block+.infos-text-block {
   margin-top: 1.1rem;
 }
 
@@ -817,6 +936,7 @@ button {
 .infos-accordion.is-open .infos-accordion__trigger {
   border-bottom: 1px solid rgba(19, 57, 81, 0.08);
 }
+
 @media (max-width: 700px) {
   .infos-page__inner {
     grid-template-columns: 32px 1fr;
@@ -840,6 +960,85 @@ button {
     height: 180px;
   }
 }
+
+/* Sitemap Styles (oui ça fait SS arrêtez de rire) */
+
+.sitemap-page__inner {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 720px;
+}
+
+.site-tree-select {
+  width: 100%;
+  font-family: var(--font-body);
+}
+
+.site-tree-select .p-treeselect {
+  width: 100%;
+}
+
+.site-tree-select.p-treeselect,
+.p-treeselect.site-tree-select {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(19, 57, 81, 0.08);
+  padding-inline: 0.35rem;
+}
+
+.site-tree-select .p-treeselect-label,
+.p-treeselect.site-tree-select .p-treeselect-label {
+  padding: 0.9rem 0.85rem;
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+}
+
+.site-tree-select .p-treeselect-trigger,
+.p-treeselect.site-tree-select .p-treeselect-trigger {
+  width: 3rem;
+  color: var(--color-header-footer);
+}
+
+.p-treeselect-panel {
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(19, 57, 81, 0.14);
+}
+
+.p-tree {
+  border: none !important;
+  background: transparent !important;
+  padding: 0.5rem;
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+}
+
+.p-treenode-content {
+  border-radius: 10px;
+  padding: 0.3rem 0.4rem;
+}
+
+.p-treenode-content:hover {
+  background: rgba(254, 220, 151, 0.22);
+}
+
+.p-tree-toggler {
+  color: var(--color-header-footer);
+}
+
+.p-highlight,
+.p-treenode-content.p-highlight {
+  background: rgba(19, 57, 81, 0.12) !important;
+  color: var(--color-text-main) !important;
+}
+
 /*
   Pre-footer et footer.
 */
@@ -872,6 +1071,42 @@ button {
   height: 100%;
   min-height: 140px;
   background-color: var(--color-header-footer);
+}
+
+.footer-branding {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.footer-logo-wrap {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 35px;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.footer-logo-wrap:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.footer-logo {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+}
+
+.footer-branding__text {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
 }
 
 .site-footer {

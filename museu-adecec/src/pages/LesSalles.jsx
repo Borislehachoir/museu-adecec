@@ -7,28 +7,45 @@ import cathedrale from '../assets/cathedrale.png';
 export default function LesSalles() {
   return (
     <section className="basic-page">
-      <nav aria-label="breadcrumb" className="breadcrumb">
+      <nav aria-label="breadcrumb" className="breadcrumb" id="breadc-rooms">
         Musée / <span>Les Salles</span>
       </nav>
 
-      <h1>Les Salles</h1>
+      <h1 id="rooms">Les Salles</h1>
 
-      <section className="salle-intro">
+      <section className="salle-intro" id="rooms-intro">
         <aside className="salle-intro__aside">
-          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="salle-image-link">
-            <img src={cathedrale} alt="Cathédrale" className="salle-image" />
+          <a
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="salle-image-link"
+          >
+            <img
+              src={cathedrale}
+              alt="Cathédrale"
+              className="salle-image"
+              id="cath-image"
+            />
           </a>
         </aside>
 
         <div className="salle-intro__content">
           <article className="info-card salle-card">
             <div className="info-card__overlay">
-              <h3>Cathédrale</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              <h3 id="rooms-title">Cathédrale</h3>
+              <p id="rooms-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris.
               </p>
-              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="btn">
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                id="rooms-btn"
+              >
                 Ouvrir
               </a>
             </div>
