@@ -30,12 +30,12 @@ export default function EasterEgg() {
                 break;
 
             case 'greet':
-                response = 'Salute,  o fratè, cumu và ? ' + text.substring(argsIndex + 1) + '!';
+                response = 'Saulte, o fratè, cumu và ? ' + text.substring(argsIndex + 1) + '!';
                 break;
 
             case 'random':
                 response = Math.floor(Math.round(Math.random() * 100)) + (Math.random());
-                if (response > 50) { response = null; }
+                if (response < 50) { response = null; }
                 else { response = 'Vostru N°: ' + response; }
                 break;
 
