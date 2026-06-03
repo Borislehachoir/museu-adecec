@@ -121,7 +121,7 @@ button {
   color: var(--color-arch-dark);
 }
 
-/*Header & barre de navigation.*/
+/*Header & barre de navigation */
 .site-header {
   position: relative;
   z-index: 1000;
@@ -300,42 +300,6 @@ button {
   z-index: 700;
 }
 
-@media (max-width: 768px) {
-  .nav-area {
-    display: none;
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    left: 1rem;
-    right: 1rem;
-    z-index: 1200;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    background: var(--color-header-footer);
-    border-radius: 14px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-  }
-
-  .nav-area.is-open {
-    display: flex;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    width: 100%;
-  }
-
-  .nav-links a {
-    width: 100%;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-  }
-}
-
 /* GRANDE IMAGE PAGE D'ACCUEIL */
 
 .big-pic {
@@ -384,28 +348,6 @@ button {
   margin: 0;
 }
 
-
-@media (max-width:700px) {
-  .big-pic {
-    height: auto
-  }
-
-  .hewwo-picture {
-    flex: none;
-    height: 60vh
-  }
-
-  .hewwo-p {
-    flex: none;
-    padding: 1rem
-  }
-
-  .hewwo-text {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    left: 3%
-  }
-}
-
 /*
   Animation images dans main de l'accueil.
   L'image entre depuis le haut au chargement de la page.
@@ -434,21 +376,33 @@ button {
   }
 }
 
-.hero-img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-  animation: slideDown 0.8s ease forwards;
-  border-radius: 0 0 24px 24px;
-}
-
-/*
-  Animation image archéologie.
-  La classe .is-visible est ajoutée par React quand l'image entre dans le viewport.
-*/
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeftAnim {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
   }
 
@@ -466,36 +420,19 @@ button {
   animation: slideInRight 0.7s ease forwards;
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.arch-img.slide-in-left {
+  animation: slideInLeftAnim 0.8s ease forwards;
 }
 
 .arch-img.zoom-in {
   animation: zoomIn 0.8s ease forwards;
 }
-
-@keyframes slideInLeftAnim {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.arch-img.slide-in-left {
-  animation: slideInLeftAnim 0.8s ease forwards;
+.hero-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  animation: slideDown 0.8s ease forwards;
+  border-radius: 0 0 24px 24px;
 }
 
 /* Mise en page générale des sections. */
@@ -976,30 +913,6 @@ button {
   border-bottom: 1px solid rgba(19, 57, 81, 0.08);
 }
 
-@media (max-width: 700px) {
-  .infos-page__inner {
-    grid-template-columns: 32px 1fr;
-    gap: 1rem;
-  }
-
-  .infos-ribbon__pattern {
-    background-size: 32px auto;
-  }
-
-  .infos-card {
-    padding: 1rem;
-    min-height: auto;
-  }
-
-  .infos-card h2 {
-    font-size: 1.45rem;
-  }
-
-  .infos-card__image-wrap img {
-    height: 180px;
-  }
-}
-
 /* Sitemap Styles (oui ça fait SS arrêtez de rire) */
 
 .sitemap-page__inner {
@@ -1263,5 +1176,96 @@ button {
   .scroll-top-btn {
     right: 1rem;
     bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-area {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 1rem;
+    right: 1rem;
+    z-index: 1200;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--color-header-footer);
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  .nav-area.is-open {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .big-pic {
+    height: auto;
+    gap: 0.75rem;
+  }
+
+  .hewwo-picture {
+    min-height: 46vh;
+  }
+
+  .hero-img {
+    height: 46vh;
+    object-fit: cover;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .hewwo-text {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    left: 4%;
+    bottom: 1.25rem;
+  }
+
+  .hewwo-p {
+    padding: 0 1rem 1rem;
+  }
+
+  .hewwo-p p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .infos-page__inner {
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+  }
+
+  .infos-ribbon__pattern {
+    background-size: 32px auto;
+  }
+
+  .infos-card {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .infos-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .infos-card__image-wrap img {
+    height: 180px;
   }
 }
