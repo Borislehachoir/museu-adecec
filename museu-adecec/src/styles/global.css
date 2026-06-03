@@ -1222,11 +1222,11 @@ button {
   }
 
   .hewwo-picture {
-    max-height: 55vh;
+    max-height: 70vh;
   }
 
   .hero-img {
-    max-height: 55vh;
+    max-height: 70vh;
     object-fit: cover;
     border-radius: 0 0 18px 18px;
   }
