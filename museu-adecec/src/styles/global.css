@@ -123,6 +123,8 @@ button {
 
 /*Header & barre de navigation.*/
 .site-header {
+  position: relative;
+  z-index: 1000;
   background-color: var(--color-header-footer);
   color: var(--color-text-light);
 }
@@ -161,8 +163,9 @@ button {
   object-fit: fill;
 }
 
-
 .navbar {
+  position: relative;
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -171,7 +174,6 @@ button {
   padding: 1rem 0;
   font-family: var(--font-title);
 }
-
 .nav-area {
   display: flex;
   align-items: center;
@@ -296,6 +298,42 @@ button {
   font-size: 1.8rem;
   cursor: pointer;
   z-index: 700;
+}
+
+@media (max-width: 768px) {
+  .nav-area {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 1rem;
+    right: 1rem;
+    z-index: 1200;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--color-header-footer);
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  .nav-area.is-open {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* GRANDE IMAGE PAGE D'ACCUEIL */
