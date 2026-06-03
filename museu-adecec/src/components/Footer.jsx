@@ -17,7 +17,8 @@ export default function Footer() {
             <p className="footer-brand" id="footer-brand">ADECEC Musée</p>
             <p id="footer-address">8 rue Philippe Pescetti, 20221 Cervione</p>
             <p id="footer-hours">Lundi au samedi, 9h–12h, 14h–18h</p>
-            <p id="footer-phone">Tél. 04 95 38 12 83</p>
+            <p id="footer-phone"> <a href="tel:+330495381283">Tél. (+33) 04 95 38 12 83</a></p>
+            <p> E-mail : <a href="mailto:contact@adecec.net">contact@adecec.net</a></p>
           </div>
         </div>
 

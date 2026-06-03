@@ -295,6 +295,7 @@ button {
   color: var(--color-text-light);
   font-size: 1.8rem;
   cursor: pointer;
+  z-index: 700;
 }
 
 /* GRANDE IMAGE PAGE D'ACCUEIL */
