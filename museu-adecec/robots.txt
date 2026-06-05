@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://museu-adecec.vercel.app/plan-site
