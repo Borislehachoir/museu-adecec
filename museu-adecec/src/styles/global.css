@@ -5,7 +5,7 @@
 :root {
   --color-header-footer: #133951;
   --color-card-bg: #263e6a;
-  --color-card-bg-2: #6B7E88;
+  --color-card-bg-2: #3d4f3c;
   --color-btn-bg: #FFF7E7;
   --color-page-bg: #f8f7f3;
   --color-hover: #fedc97;
@@ -527,7 +527,7 @@ button {
 }
 
 .info-card__overlay {
-  width: min(420px-1.5rem);
+  width: min(420px - 1.5rem);
   display: grid;
   gap: 0.8rem;
   padding: 2rem;
