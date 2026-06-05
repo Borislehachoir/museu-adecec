@@ -1,6 +1,6 @@
-import museu from '../assets/museu.png';
-import museeExterieur from '../assets/museuexterieur.jpg';
-import cathedrale from '../assets/cathedrale.png';
+import museu from '../assets/old-cathedral.webp';
+import museeExterieur from '../assets/museuexterieur.webp';
+import cathedrale from '../assets/cathedrale.webp';
 
 export default function APropos() {
   return (

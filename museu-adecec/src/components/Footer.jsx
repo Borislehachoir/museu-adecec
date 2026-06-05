@@ -1,4 +1,4 @@
-import adececLogo from '../assets/adececlogo.jpg';
+import adececLogo from '../assets/adececlogo.webp';
 
 export default function Footer() {
   return (
@@ -35,7 +35,7 @@ export default function Footer() {
           <a href="plan-site" id="footer-plan">Plan du site</a>
           <a href="accessibilite" id="footer-access">Accessibilité</a>
           <a href="https://adecec.net/adecec/cuntattu.php#legal" id="footer-legal">Mentions légales</a>
-          <a href="placeholder" id="footer-credits">Crédits</a>
+          <a href="https://github.com/Borislehachoir" id="footer-credits">Crédits</a>
         </div>
 
         {/* <button

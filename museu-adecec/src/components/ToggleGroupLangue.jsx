@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { injectTexts } from '../scripts/language-switch';
 
 import flagFr from '../assets/flag-fr.webp';
-import flagCo from '../assets/flag-co.png';
-import flagEn from '../assets/flag-en.png';
+import flagCo from '../assets/flag-co.webp';
+import flagEn from '../assets/flag-en.webp';
 
 const LANGUAGES = [
   { code: 'fr', label: 'Français', flag: flagFr, alt: 'Drapeau français' },

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import kayou from '../assets/kayouadecec.png';
-import storia from '../assets/storiaarcheo.jpg';
-import creusets from '../assets/creusets.png';
+import kayou from '../assets/kayouadecec.webp';
+import storia from '../assets/storiaarcheo.webp';
+import creusets from '../assets/jarre.webp';
 
 export default function Archeologie() {
   const heroImageRef = useRef(null);

@@ -1,9 +1,5 @@
-import cathedrale from '../assets/cathedrale.png';
+import cathedrale from '../assets/capre-corsi.webp';
 
-/*
-  La page Les Salles présente les différentes salles du musée.
-  Elle inclut un breadcrumb de navigation et une grille de cartes.
-*/
 export default function LesSalles() {
   return (
     <section className="basic-page">
@@ -14,30 +10,30 @@ export default function LesSalles() {
       <h1 id="rooms">Les Salles</h1>
 
       <section className="salle-intro" id="rooms-intro">
-        <aside className="salle-intro__aside">
+        <article className="salle-card">
           <a
             href="https://www.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="salle-image-link"
+            className="salle-card__media"
+            aria-label="Ouvrir la visite virtuelle"
           >
-            <img
-              src={cathedrale}
-              alt="Cathédrale"
-              className="salle-image"
-              id="cath-image"
-            />
+            <figure className="salle-figure">
+              <img
+                src={cathedrale}
+                alt="Cathédrale"
+                className="salle-image"
+                id="cath-image"
+              />
+              <figcaption id = "figcap-salles">Visite virtuelle</figcaption>
+            </figure>
           </a>
-        </aside>
 
-        <div className="salle-intro__content">
-          <article className="info-card salle-card">
+          <div className="salle-card__content">
             <div className="info-card__overlay">
-              <h3 id="rooms-title">Cathédrale</h3>
+              <h3 id="rooms-title">Lorem ipsum default header</h3>
               <p id="rooms-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris.
+                Lorem ipsum default text
               </p>
               <a
                 href="https://www.google.com"
@@ -46,11 +42,11 @@ export default function LesSalles() {
                 className="btn"
                 id="rooms-btn"
               >
-                Ouvrir
+                Découvrir le guide (aperçu)
               </a>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
     </section>
   );

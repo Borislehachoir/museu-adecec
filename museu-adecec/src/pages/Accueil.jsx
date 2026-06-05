@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import image1 from '../assets/museu.png';
-import image2 from '../assets/storiaarcheo.jpg';
-import image3 from '../assets/kayouadecec.png';
-import image4 from '../assets/cervione.png';
-import museeExterieur from '../assets/museuexterieur.jpg';
+import image1 from '../assets/museu-piani.webp';
+import image2 from '../assets/storiaarcheo.webp';
+import image3 from '../assets/museu-pano.webp';
+import image4 from '../assets/cervione.webp';
+import museeExterieur from '../assets/museuexterieur.webp';
 import initLanguageSwitch from '../scripts/language-switch';
 
 export default function Accueil() {
@@ -72,14 +72,18 @@ export default function Accueil() {
         <div className="hewwo-picture" ref={hewwoPictureRef}>
           <img src={museeExterieur} alt="Extérieur du musée" className="hero-img" />
           <h1 className="hewwo-text" id="home-title" ref={hewwoTextRef}>
-            Bienvenue sur le site du musée
+            Bienvenue sur le site du musée Anton Dumenicu Monti.
           </h1>
         </div>
 
         <div className="hewwo-p">
           <p id="home-intro">
-            Ceci est un texte. Bienvenue sur un texte, ici on musée le visite.
-          </p>
+            En 1970, au beau milieu du Riacquistu, un groupe d'intellectuels corses se rejoignent pour créer une association à Cervione, en plein coeur de la Costa Verde. <br />
+            Très tôt, une de leurs missions principales s'avère être la fondation et l'entretien d'un musée ethnographique qui documenterait la culture, le quotidien et les métiers de nos anciens entre la fin du XIXe siècle et la première moitié du XXe siècle. <br />
+            En 1975, le musée s'installe dans l'ancien séminaire du couvent d'Aléria, bâti par Monseigneur Alexandre Sauli au XVIe siècle, et en 2012 il est baptisé de son nom actuel, du nom du président fondateur.<br />
+            Depuis plus de cinquante ans, nous n'avons jamais cessé de collecter, préserver, partager et exposer des objets qui firent parti du quotidien de nos pères, grand-pères et arrière-grand-pères.
+            <br />
+            Et ça serait un honneur que vous poursuiviez dès à présent, cette découverte de notre mémoire collective en explorant les autres pages du musée en ligne.</p>
         </div>
       </section>
 

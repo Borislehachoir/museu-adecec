@@ -1,204 +1,42 @@
-
 import { useEffect, useState } from 'react';
-import motifOrange from '../assets/motiforange.png';
-import groupeImg from '../assets/museuexterieur.jpg';
-
-function AccordionItem({ title, content, isOpen, onToggle }) {
-  return (
-    <div className={`infos-accordion ${isOpen ? 'is-open' : ''}`}>
-      <button
-        type="button"
-        className="infos-accordion__trigger"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-      >
-        <span>{title}</span>
-        <span className="infos-accordion__icon">{isOpen ? '▾' : '▸'}</span>
-      </button>
-
-      {isOpen && (
-        <div className="infos-accordion__content">
-          <p>{content}</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
-const infosTexts = {
-  fr: {
-    breadcrumbParent: 'Musée / ',
-    breadcrumbCurrent: 'Informations pratiques',
-    horairesTitle: 'Horaires',
-    period1Title: 'Période 1',
-    period1Text:
-      'Ceci est un texte pour des horaires spécifiques avec un textecourt et un textecourt et un textecourt et un textecourt.',
-    period2Title: 'Période 2',
-    period2Text:
-      'Ceci est un texte pour des horaires spécifiques avec un textecourt et un textecourt et un textecourt et un textecourt.',
-
-    groupsTitle: 'Groupes et scolaires',
-    groupsIntro:
-      'Ceci est un texte ceci est un textececi est un textceci est un textececi est un textececi est un textececi est un textececi.',
-
-    tarifsTitle: 'Tarifs',
-    faqTitle: 'FAQ',
-
-    tarifs: [
-      {
-        title: 'Tarif 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Tarif 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-
-    faq: [
-      {
-        title: 'Question 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Question 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Question 3',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-  },
-
-  en: {
-    breadcrumbParent: 'Museum / ',
-    breadcrumbCurrent: 'Practical information',
-    horairesTitle: 'Opening hours',
-    period1Title: 'Period 1',
-    period1Text:
-      'This is a text for specific opening hours with a short text and a short text and a short text and a short text.',
-    period2Title: 'Period 2',
-    period2Text:
-      'This is a text for specific opening hours with a short text and a short text and a short text and a short text.',
-
-    groupsTitle: 'Groups and schools',
-    groupsIntro:
-      'This is a text this is a textthis is a textthis is a textthis is a textthis is a textthis is a textthis.',
-
-    tarifsTitle: 'Prices',
-    faqTitle: 'FAQ',
-
-    tarifs: [
-      {
-        title: 'Price 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Price 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-
-    faq: [
-      {
-        title: 'Question 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Question 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Question 3',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-  },
-
-  co: {
-    breadcrumbParent: 'Museu / ',
-    breadcrumbCurrent: 'Infurmazione pratiche',
-    horairesTitle: 'Urarii',
-    period1Title: 'Periodu 1',
-    period1Text:
-      'Quessu hè un testu per urarii specifichi cù un testu cortu è un testu cortu è un testu cortu è un testu cortu.',
-    period2Title: 'Periodu 2',
-    period2Text:
-      'Quessu hè un testu per urarii specifichi cù un testu cortu è un testu cortu è un testu cortu è un testu cortu.',
-
-    groupsTitle: 'Gruppi è scole',
-    groupsIntro:
-      'Quessu hè un testu quessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquessu hè un testuquì.',
-
-    tarifsTitle: 'Tariffe',
-    faqTitle: 'FAQ',
-
-    tarifs: [
-      {
-        title: 'Tariffa 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Tariffa 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-
-    faq: [
-      {
-        title: 'Dumanda 1',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Dumanda 2',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-      {
-        title: 'Dumanda 3',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      },
-    ],
-  },
-};
+import initLanguageSwitch, { injectTexts } from '../scripts/language-switch';
+import motifOrange from '../assets/motiforange.webp';
+import groupeImg from '../assets/museu-zitelli.webp';
 
 export default function InfosPratiques() {
-  const [openTarif, setOpenTarif] = useState(0);
-  const [openFaq, setOpenFaq] = useState(2);
-  const [lang, setLang] = useState('fr');
+  const [openTarif, setOpenTarif] = useState(null);
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
-    const select = document.getElementById('language-select');
-    if (!select) return;
+    initLanguageSwitch();
 
-    const updateLang = () => {
-      setLang(select.value || 'fr');
+    const currentLang = localStorage.getItem('museum-lang') || 'fr';
+
+    const frame = requestAnimationFrame(() => {
+      injectTexts(currentLang);
+    });
+
+    const select = document.getElementById('language-select');
+    if (!select) {
+      return () => cancelAnimationFrame(frame);
+    }
+
+    const handleChange = () => {
+      const nextLang =
+        localStorage.getItem('museum-lang') || select.value || 'fr';
+
+      requestAnimationFrame(() => {
+        injectTexts(nextLang);
+      });
     };
 
-    updateLang();
-    select.addEventListener('change', updateLang);
+    select.addEventListener('change', handleChange);
 
     return () => {
-      select.removeEventListener('change', updateLang);
+      cancelAnimationFrame(frame);
+      select.removeEventListener('change', handleChange);
     };
   }, []);
-
-  const t = infosTexts[lang];
 
   return (
     <section className="infos-page">
@@ -212,28 +50,38 @@ export default function InfosPratiques() {
 
         <div className="infos-content">
           <div className="infos-breadcrumb">
-            <span>{t.breadcrumbParent}</span>
-            <strong>{t.breadcrumbCurrent}</strong>
+            <span id="infos-breadcrumb-parent">Musée</span> /{' '}
+            <strong id="infos-breadcrumb-current">Informations pratiques</strong>
           </div>
 
           <div className="infos-grid">
             <article className="infos-card infos-card--dark">
-              <h2>{t.horairesTitle}</h2>
+              <h2 id="infos-horaires-title">Horaires</h2>
 
               <div className="infos-text-block">
-                <h3>{t.period1Title}</h3>
-                <p>{t.period1Text}</p>
+                <h3 id="infos-period1-title">Période 1</h3>
+                <p id="infos-period1-text">
+                  Ceci est un texte pour des horaires spécifiques avec un texte
+                  court et un texte court et un texte court et un texte court.
+                </p>
               </div>
 
               <div className="infos-text-block">
-                <h3>{t.period2Title}</h3>
-                <p>{t.period2Text}</p>
+                <h3 id="infos-period2-title">Période 2</h3>
+                <p id="infos-period2-text">
+                  Ceci est un texte pour des horaires spécifiques avec un texte
+                  court et un texte court et un texte court et un texte court.
+                </p>
               </div>
             </article>
 
             <article className="infos-card infos-card--soft">
-              <h2>{t.groupsTitle}</h2>
-              <p className="infos-card__intro">{t.groupsIntro}</p>
+              <h2 id="infos-groups-title">Groupes et scolaires</h2>
+
+              <p className="infos-card__intro" id="infos-groups-intro">
+                Ceci est un texte ceci est un texte ceci est un texte ceci est
+                un texte ceci est un texte ceci est un texte ceci est un texte.
+              </p>
 
               <div className="infos-card__image-wrap">
                 <img src={groupeImg} alt="Accueil de groupes au musée" />
@@ -241,34 +89,157 @@ export default function InfosPratiques() {
             </article>
 
             <article className="infos-card infos-card--soft">
-              <h2>{t.tarifsTitle}</h2>
+              <h2 id="infos-tarifs-title">Tarifs</h2>
 
               <div className="infos-accordion-list">
-                {t.tarifs.map((item, index) => (
-                  <AccordionItem
-                    key={item.title}
-                    title={item.title}
-                    content={item.content}
-                    isOpen={openTarif === index}
-                    onToggle={() => setOpenTarif(openTarif === index ? null : index)}
-                  />
-                ))}
+                <div
+                  className={`infos-accordion ${openTarif === 0 ? 'is-open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="infos-accordion__trigger"
+                    onClick={() => setOpenTarif(openTarif === 0 ? null : 0)}
+                    aria-expanded={openTarif === 0}
+                    aria-controls="infos-tarif-panel-1"
+                  >
+                    <span id="infos-tarif-1-title">Visite libre</span>
+                    <span className="infos-accordion__icon">
+                      {openTarif === 0 ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="infos-tarif-panel-1"
+                    className="infos-accordion__content"
+                    hidden={openTarif !== 0}
+                  >
+                    <p id="infos-tarif-1-content">
+                      Cochon d'inde.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`infos-accordion ${openTarif === 1 ? 'is-open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="infos-accordion__trigger"
+                    onClick={() => setOpenTarif(openTarif === 1 ? null : 1)}
+                    aria-expanded={openTarif === 1}
+                    aria-controls="infos-tarif-panel-2"
+                  >
+                    <span id="infos-tarif-2-title">
+                      Visite guidée (1h30), minimum 10 personnes
+                    </span>
+                    <span className="infos-accordion__icon">
+                      {openTarif === 1 ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="infos-tarif-panel-2"
+                    className="infos-accordion__content"
+                    hidden={openTarif !== 1}
+                  >
+                    <p id="infos-tarif-2-content">
+                     Hérisson.
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
 
             <article className="infos-card infos-card--dark">
-              <h2>{t.faqTitle}</h2>
+              <h2 id="infos-faq-title">FAQ</h2>
 
               <div className="infos-accordion-list">
-                {t.faq.map((item, index) => (
-                  <AccordionItem
-                    key={item.title}
-                    title={item.title}
-                    content={item.content}
-                    isOpen={openFaq === index}
-                    onToggle={() => setOpenFaq(openFaq === index ? null : index)}
-                  />
-                ))}
+                <div
+                  className={`infos-accordion ${openFaq === 0 ? 'is-open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="infos-accordion__trigger"
+                    onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}
+                    aria-expanded={openFaq === 0}
+                    aria-controls="infos-faq-panel-1"
+                  >
+                    <span id="infos-faq-1-title">Question 1</span>
+                    <span className="infos-accordion__icon">
+                      {openFaq === 0 ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="infos-faq-panel-1"
+                    className="infos-accordion__content"
+                    hidden={openFaq !== 0}
+                  >
+                    <p id="infos-faq-1-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`infos-accordion ${openFaq === 1 ? 'is-open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="infos-accordion__trigger"
+                    onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
+                    aria-expanded={openFaq === 1}
+                    aria-controls="infos-faq-panel-2"
+                  >
+                    <span id="infos-faq-2-title">Question 2</span>
+                    <span className="infos-accordion__icon">
+                      {openFaq === 1 ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="infos-faq-panel-2"
+                    className="infos-accordion__content"
+                    hidden={openFaq !== 1}
+                  >
+                    <p id="infos-faq-2-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`infos-accordion ${openFaq === 2 ? 'is-open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="infos-accordion__trigger"
+                    onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
+                    aria-expanded={openFaq === 2}
+                    aria-controls="infos-faq-panel-3"
+                  >
+                    <span id="infos-faq-3-title">Question 3</span>
+                    <span className="infos-accordion__icon">
+                      {openFaq === 2 ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="infos-faq-panel-3"
+                    className="infos-accordion__content"
+                    hidden={openFaq !== 2}
+                  >
+                    <p id="infos-faq-3-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
           </div>

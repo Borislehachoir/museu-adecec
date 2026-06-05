@@ -31,8 +31,6 @@ export default function PreFooter() {
 
           <div className="pre-footer__column">
             <h2 id="pf-info">Informations pratiques</h2>
-            <p id="pf-address">Adresse : 8 rue Philippe Pescetti, 20221 Cervione.</p>
-            <p id="pf-phone">Téléphone : 04 95 38 12 83.</p>
             <p id="pf-text">Ajoute ici ensuite les tarifs, l'accessibilité et les conditions de visite.</p>
           </div>
         </div>

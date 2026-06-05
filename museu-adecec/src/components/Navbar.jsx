@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import ToggleGroupLangue from './ToggleGroupLangue';
-import adececLogo from '../assets/adececlogo.jpg';
+import adececLogo from '../assets/adececlogo.webp';
 
 /*
 La navbar gère un état local "ouvert / fermé" pour le menu mobile.
