@@ -32,7 +32,7 @@ const texts = {
         pfTitle: 'Préparer votre visite',
         pfHours: 'Lundi au samedi, 9h–12h et 14h–18h.',
         pfInfo: 'Informations pratiques',
-        pfText: '<h3>Tarifs</h3>Visite libre : 5 € pour les adultes, 3 € pour les 12-16 ans et gratuit pour les moins de 12 ans.<br /><br />Visite guidée (1h30, minimum 10 personnes) : 7 € par adulte, 5 € pour les 12-16 ans et gratuit pour les moins de 12 ans.<br /><br /><h3>Accessibilité</h3>Le bâtiment étant classé monument historique, il ne peut pas accueillir les aménagements nécessaires aux personnes en fauteuil roulant ou ayant des difficultés à se déplacer.<br /><br />Le musée reste toutefois accessible aux personnes malvoyantes, malentendantes et à toute autre personne en situation de handicap, visible ou invisible.<br /><br /><h3>Venir visiter</h3> Le musée se situe au 8, Carrughju Filipu Pescetti, dans le village de Cervione. <br /> Il est à 45 minutes de l\'aéroport Bastia-Poretta, à 30 minutes d\'Aleria et à une heure de Bastia.<br /> Il n\'est accessible, hors voyages en autocar, qu\'en voiture et à vélo. ',
+        pfText: '<h4>Tarifs</h4>Visite libre : 5 € pour les adultes, 3 € pour les 12-16 ans et gratuit pour les moins de 12 ans.<br /><br />Visite guidée (1h30, minimum 10 personnes) : 7 € par adulte, 5 € pour les 12-16 ans et gratuit pour les moins de 12 ans.<br /><br /><h4>Accessibilité</h4>Le bâtiment étant classé monument historique, il ne peut pas accueillir les aménagements nécessaires aux personnes en fauteuil roulant ou ayant des difficultés à se déplacer.<br /><br />Le musée reste toutefois accessible aux personnes malvoyantes, malentendantes et à toute autre personne en situation de handicap, visible ou invisible.<br /><br /><h4>Venir visiter</h4> Le musée se situe au 8, Carrughju Filipu Pescetti, dans le village de Cervione. <br /> Il est à 45 minutes de l\'aéroport Bastia-Poretta, à 30 minutes d\'Aleria et à une heure de Bastia.<br /> Il n\'est accessible, hors voyages en autocar, qu\'en voiture et à vélo. ',
 
         archTitle: 'Archéologie',
         archDesc: 'Parmi les membres fondateurs de l\'ADECEC, l\'un d\'eux était passionné d\'archéologie. Cette page existe comme un héritage, et rend honneur aux personnes qui ont contribuées à créer la petite section archéologie et minéralogie disponible dans notre musée. <br /> Vous trouverez sur cette page une liste de missions et d\'ouvrages archéologiques ou ethnographiques écrits par des membres de notre association. Bonne visite !',
@@ -87,6 +87,46 @@ const texts = {
         infosFaq3Title: 'Est-ce que c\'est accessible aux PMR ? ',
         infosFaq3Content: 'Le bâtiment étant classé en monument historique, nous ne pouvons réaliser les aménagements nécessaires pour les personnes en fauteuil roulant ou ayant des difficultés à se déplacer. Cependant, notre musée est accessible aux personnes malvoyantes, malentendantes et à toute autre personne en situation de handicap, visible ou invisible.',
 
+        accessTitle: "Déclaration d'accessibilité",
+
+        accessIdentityTitle: "Identité du déclarant",
+        accessIdentityText: `Ce site est édité par ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONE,<br/>Tél. 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN : 325 192 383<br/>SIRET du siège social : 325 192 383 00017<br/>Code NAF/APE : 94.99Z.`,
+
+        accessResultsTitle: "Résultats des tests",
+        accessResultsText1: `Très accessible (score au-dessus de 90 sur chaque catégorie sur <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
+        accessResultsText2: `Contraste vérifié avec <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a> : 9.89:1 pour l'arrière-plan des cartes (#263E6A) et du site (#F8F7F3), 8.03:1 pour la couleur de survol des boutons (#fedc97) et l'arrière-plan des cartes (#263E6A), 9.18:1 pour cette même couleur de survol et l'arrière-plan du header/footer (#133951), 13.87:1 pour la couleur du texte des boutons (#1C2B24) et le fond des boutons (#FFF7E7), et 7.16:1 pour le fond du bouton de retour en haut (#FFBB33) et l'arrière-plan du footer (#133951).`,
+
+        accessComplianceTitle: "État de conformité",
+        accessComplianceText: `Aucun audit complet du site fondé sur les critères du <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a> n'a encore été réalisé. Le site est donc déclaré partiellement conforme. Cette section sera mise à jour dès qu'un audit complet aura été mené. En attendant, plusieurs vérifications techniques ont été effectuées à l'aide des outils du <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a>.`,
+
+        accessNonAccessibleTitle: "Contenus non accessibles",
+        accessNonAccessibleText: "À la date de rédaction de cette déclaration, les contenus non accessibles n'ont pas encore été listés de manière exhaustive. Cette section sera complétée après audit complet du site.",
+
+        accessExemptionTitle: "Dérogation",
+        accessExemptionText: "Aucune dérogation pour charge disproportionnée n'est invoquée à ce jour.",
+
+        accessStatementTitle: "Établissement de cette déclaration d'accessibilité",
+        accessStatementText: "Cette déclaration a été réalisée le 05/06/2026 par l'étudiant-stagiaire Boris ROCCHIETTI pour le compte de l'Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, association fondée en 1970 à Cervioni.",
+
+        accessTechTitle: "Technologies utilisées pour la réalisation du site web",
+        accessTechText: `HTML, CSS, JavaScript (React, Vite et la bibliothèque PrimeReact). Le menu déroulant de changement de langue est inspiré d'un <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">modèle original</a> de Max Ho.`,
+
+        accessToolsTitle: "Agents utilisateurs, technologies d'assistance et outils utilisés pour vérifier l'accessibilité",
+        accessToolsText: `Les vérifications ont été réalisées avec les agents utilisateurs suivants : Google Chrome et Mozilla Firefox. Les essais ont été effectués principalement au clavier. Les outils utilisés lors de l'évaluation sont : Lighthouse (extension Google Chrome), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker et W3C Internationalization Checker.`,
+
+        accessPagesTitle: "Pages du site ayant fait l'objet de la vérification de conformité",
+        accessPagesText: "Accueil ; À propos ; Archéologie ; Infos pratiques ; Les salles ; Plan du site ; Accessibilité.",
+
+        accessFeedbackTitle: "Retour d'information et contact",
+        accessFeedbackText: `Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable du site internet pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme. Pour nous contacter, vous pouvez écrire directement à <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> ou nous appeler au (+33) 04 95 38 12 83.`,
+
+        accessRemedyTitle: "Voies de recours",
+        accessRemedyIntro: "Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un service du portail et vous n’avez pas obtenu de réponse satisfaisante.",
+        accessRemedyListIntro: "Vous pouvez :",
+        accessRemedyItem1: `Écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/" target="_blank" rel="noopener noreferrer">Défenseur des droits</a>.`,
+        accessRemedyItem2: `Contacter le <a href="https://www.defenseurdesdroits.fr/carte-des-delegues" target="_blank" rel="noopener noreferrer">délégué du Défenseur des droits</a> dans votre région.`,
+        accessRemedyItem3: "Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) : Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07.",
+
         eeTitle: 'Vous m\'avez trouvé ?',
         eeDesc: 'Bien le bonjour ! ... <br /> ...',
         eeHintsTitle: 'Indices :',
@@ -124,12 +164,12 @@ const texts = {
         footerPlan: 'Sitemap',
         footerAccess: 'Accessibility',
         footerLegal: 'Legal notice',
-    footerCredits: 'Credits : Boris Rocchietti / ADECEC',
+        footerCredits: 'Credits : Boris Rocchietti / ADECEC',
 
         pfTitle: 'Prepare your visit !',
         pfHours: 'Monday to Saturday, 9am–12pm and 2pm–6pm.',
         pfInfo: 'Practical information',
-        pfText: '<h3>Prices</h3>Self-guided visit: €5 for adults, €3 for visitors aged 12 to 16, and free for children under 12.<br /><br />Guided visit (1h30, minimum 10 people): €7 per adult, €5 for visitors aged 12 to 16, and free for children under 12.<br /><br /><h3>Accessibility</h3>The building is listed as a historic monument, so it cannot be adapted for wheelchair users or people with reduced mobility.<br /><br />However, the museum remains accessible to visually impaired and hearing-impaired visitors, as well as to anyone living with a disability, whether visible or invisible.<br /><br /><h3>Getting here</h3>The museum is located at 8 Carrughju Filipu Pescetti, in the village of Cervione.<br />It is 45 minutes from Bastia-Poretta airport, 30 minutes from Aleria, and one hour from Bastia.<br />Apart from coach trips, it can only be reached by car or bicycle.',
+        pfText: '<h4>Prices</h4>Self-guided visit: €5 for adults, €3 for visitors aged 12 to 16, and free for children under 12.<br /><br />Guided visit (1h30, minimum 10 people): €7 per adult, €5 for visitors aged 12 to 16, and free for children under 12.<br /><br /><h4>Accessibility</h4>The building is listed as a historic monument, so it cannot be adapted for wheelchair users or people with reduced mobility.<br /><br />However, the museum remains accessible to visually impaired and hearing-impaired visitors, as well as to anyone living with a disability, whether visible or invisible.<br /><br /><h4>Getting here</h4>The museum is located at 8 Carrughju Filipu Pescetti, in the village of Cervione.<br />It is 45 minutes from Bastia-Poretta airport, 30 minutes from Aleria, and one hour from Bastia.<br />Apart from coach trips, it can only be reached by car or bicycle.',
 
         archTitle: 'Archaeology',
         archDesc: 'Among the founding members of ADECEC, one was passionate about archaeology. This page exists as a legacy and pays tribute to the people who helped create the small archaeology and mineralogy section available in our museum. <br /> On this page, you will find a list of archaeological and ethnographic missions and works written by members of our association. Enjoy your visit!',
@@ -184,14 +224,46 @@ const texts = {
         infosFaq3Title: 'Is the museum accessible to PRM?',
         infosFaq3Content: 'As the building is registered as a national heritage site under the <em>Monument Historique</em> designation, we cannot carry out the necessary adaptations for wheelchair users or people with mobility difficulties. However, our museum is accessible to people with visual or hearing impairments, as well as to any other person living with a disability, whether visible or invisible.',
 
-        eeTitle: 'You found me ??? N- N- No way ???',
-        eeDesc: 'Well, dang it, aren\'t these kids smart... Anyway ! Hello there! If you are here, it is either because you\'re incredibly lucky or incredibly smart. Congratulations! Now, you can go back to the main page ! <br /> ... <br /> Wait... What are you still waiting for? There is nothing else to see here. Oh, is it what you see below that intrigues you? There is indeed a small secret. But to discover it, you need to find a word.',
-        eeGuess: 'Hints:',
-        eeGuess1: 'Nothing is random. The first is the number of letters. The second is the first letter of this person\'s name.',
-        eeGuess2: 'Did you read carefully?',
-        eeGuess3: 'It starts with S',
-        eeTermTitle: 'The Command Prompt',
-        eeTermDesc: 'Type "<strong>date</strong>" to display the current date, "<strong>greet {0}</strong>" for a message, "<strong>random</strong>" to get a random number and "<strong>clear</strong>" to reset everything.',
+        accessTitle: "Accessibility statement",
+
+        accessIdentityTitle: "Publisher identity",
+        accessIdentityText: `This website is published by ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONE,<br/>Phone: 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN: 325 192 383<br/>Head office SIRET: 325 192 383 00017<br/>NAF/APE code: 94.99Z.`,
+
+        accessResultsTitle: "Test results",
+        accessResultsText1: `Highly accessible (score above 90 in every category on <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
+        accessResultsText2: `Contrast checked with <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a>: 9.89:1 for the card background (#263E6A) against the site background (#F8F7F3), 8.03:1 for the button hover colour (#fedc97) against the card background (#263E6A), 9.18:1 for that same hover colour against the header/footer background (#133951), 13.87:1 for the button text colour (#1C2B24) against the button background (#FFF7E7), and 7.16:1 for the back-to-top button background (#FFBB33) against the footer background (#133951).`,
+
+        accessComplianceTitle: "Compliance status",
+        accessComplianceText: `No full audit of the website based on the criteria of <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a> has yet been carried out. The website is therefore declared partially compliant. This section will be updated as soon as a full audit has been completed. In the meantime, several technical checks have been carried out using <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a> tools.`,
+
+        accessNonAccessibleTitle: "Non-accessible content",
+        accessNonAccessibleText: "On the date this statement was written, non-accessible content had not yet been listed exhaustively. This section will be completed after a full audit of the website.",
+
+        accessExemptionTitle: "Exemptions",
+        accessExemptionText: "No exemption for disproportionate burden is claimed at this stage.",
+
+        accessStatementTitle: "Preparation of this accessibility statement",
+        accessStatementText: "This statement was prepared on 05/06/2026 by student intern Boris ROCCHIETTI on behalf of the Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, an association founded in 1970 in Cervioni.",
+
+        accessTechTitle: "Technologies used to build the website",
+        accessTechText: `HTML, CSS, JavaScript (React, Vite and the PrimeReact library). The language-switching dropdown menu is inspired by an <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">original model</a> by Max Ho.`,
+
+        accessToolsTitle: "User agents, assistive technologies and tools used to verify accessibility",
+        accessToolsText: "The checks were carried out using the following user agents: Google Chrome and Mozilla Firefox. Testing was performed mainly with keyboard navigation. The tools used during the evaluation were: Lighthouse (Google Chrome extension), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker and W3C Internationalization Checker.",
+
+        accessPagesTitle: "Pages of the website checked for compliance",
+        accessPagesText: "Home; About; Archaeology; Practical information; The rooms; Sitemap; Accessibility.",
+
+        accessFeedbackTitle: "Feedback and contact",
+        accessFeedbackText: `If you are unable to access any content or service, you may contact the website manager in order to be directed to an accessible alternative or to obtain the content in another form. To contact us, you can write directly to <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> or call us at (+33) 04 95 38 12 83.`,
+
+        accessRemedyTitle: "Remedies",
+        accessRemedyIntro: "This procedure should be used in the following case: you have reported an accessibility issue to the website manager that prevents you from accessing content or a service on the portal, and you have not received a satisfactory response.",
+        accessRemedyListIntro: "You may:",
+        accessRemedyItem1: `Write a message to the <a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/" target="_blank" rel="noopener noreferrer">Defender of Rights</a>.`,
+        accessRemedyItem2: `Contact the <a href="https://www.defenseurdesdroits.fr/carte-des-delegues" target="_blank" rel="noopener noreferrer">local representative of the Defender of Rights</a> in your area.`,
+        accessRemedyItem3: "Send a letter by post (free of charge, no stamp required): Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07.",
+
     },
     co: {
         navHome: 'Accolta',
@@ -226,7 +298,7 @@ const texts = {
         pfTitle: 'Preparate a vostra visita',
         pfHours: 'Da luni à sabbatu, 9 ore–12 ore è 14 ore–18 ore.',
         pfInfo: 'Infurmazione pratiche',
-        pfText: '<h3>Tariffe</h3>A visita libera costa 5 € pè l’adulti, 3 € pè i 12-16 anni è hè gratuita pè i zitelli di menu di 12 anni.<br /><br />A visita guidata (1h30, minimu 10 persone) costa 7 € per adultu, 5 € pè i 12-16 anni è hè gratuita pè i zitelli di menu di 12 anni.<br /><br /><h3>Accessibilità</h3>U bastimentu hè classificatu cum’è munumentu storicu, dunque ùn pò accoglie l’ammagliamenti necessarii pè e persone in futtugliu rutulante o chì anu difficultà à marchjassi.<br /><br />U museu resta quantunque accessibile à e persone cecci, cionci è à ogni altra persona in situazione di disabilità, visibile o invisibile.<br /><br /><h3>Venite à scopre u nostru museu</h3>U museu si trova à u 8, Carrughju Filipu Pescetti, in u paese di Cervioni.<br /> Hè à 45 minuti da l’aeroportu Bastia-Poretta, a 30 minuti d’Aleria è à un’ora di Bastia.<br />Ùn ci si pò ghjunghje, fora di i viaghji in gruppi in autocaru, o cu in vittura o in velucipede.',
+        pfText: '<h4>Tariffe</h4>A visita libera costa 5 € pè l’adulti, 3 € pè i 12-16 anni è hè gratuita pè i zitelli di menu di 12 anni.<br /><br />A visita guidata (1h30, minimu 10 persone) costa 7 € per adultu, 5 € pè i 12-16 anni è hè gratuita pè i zitelli di menu di 12 anni.<br /><br /><h4>Accessibilità</h4>U bastimentu hè classificatu cum’è munumentu storicu, dunque ùn pò accoglie l’ammagliamenti necessarii pè e persone in futtugliu rutulante o chì anu difficultà à marchjassi.<br /><br />U museu resta quantunque accessibile à e persone cecci, cionci è à ogni altra persona in situazione di disabilità, visibile o invisibile.<br /><br /><h4>Venite à scopre u nostru museu</h4>U museu si trova à u 8, Carrughju Filipu Pescetti, in u paese di Cervioni.<br /> Hè à 45 minuti da l’aeroportu Bastia-Poretta, a 30 minuti d’Aleria è à un’ora di Bastia.<br />Ùn ci si pò ghjunghje, fora di i viaghji in gruppi in autocaru, o cu in vittura o in velucipede.',
 
         archTitle: 'Archeulugia',
         archDesc: "Frà i membri fundatori di l’ADECEC, unu era appassiunatu d’archeulugia. Sta pagina esiste cum’è una eredità è pè rende onore à e persone chì anu cuncorsu à creà a piccula sezzione d’archeulugia è di mineralugia dispunibule in u nostru museu. <br /> Truverete nant’à sta pagina una lista di missione è d’opere archeulugiche o etnugrafiche scritte da membri di a nostra associu. Bona visita !",
@@ -280,6 +352,47 @@ const texts = {
         infosFaq2Content: 'Accettemu solu l’ogetti etnugrafichi venuti da a nostra isula, principalmente di u XIXu seculu sin’à a prima metà di u XXu seculu. Ùn accettemu dunque micca l’ogetti chì stanu fora di stu quadru, cum’è l’anfore rumane o altre pezze chì ùn anu tantu raportu cù e missione di u nostru museu. U nostru museu hè focalizatu nant’à u studiu etnugraficu è storicu di u populu corsu. Sè vo vulete dà ci o cunfidà ci qualchì ogettu, ringraziemu di cuntattà ci à u 04 95 38 12 83 o à <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a>.',
         infosFaq3Title: 'Hè accessibile à e PMR ?',
         infosFaq3Content: 'Siccome l’edifiziu hè classificatu munumentu storicu, ùn pudemu fà l’aghjustamenti necessarii per e persone in carrughjinu o cù difficultà à move si. Invece, u nostru museu hè accessibile à e persone cun difficultà visuale o auditiva, è à ogni altra persona in situazione di disabilità, visibile o micca.',
+
+        accessTitle: "Dichjarazione d'accessibilità",
+
+        accessIdentityTitle: "Identità di u dichjarente",
+        accessIdentityText: `Stu situ hè editatu da ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONI,<br/>Tel. 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN : 325 192 383<br/>SIRET di a sede suciale : 325 192 383 00017<br/>Codice NAF/APE : 94.99Z.`,
+
+        accessResultsTitle: "Risultati di e prove",
+        accessResultsText1: `Assai accessibile (puntuazione sopra à 90 in ogni categuria nant'à <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
+        accessResultsText2: `U cuntrastu hè statu verificatu cù <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a> : 9.89:1 per u sfondulu di e carte (#263E6A) è di u situ (#F8F7F3), 8.03:1 per a culore di soprabolu di i buttoni (#fedc97) è u sfondulu di e carte(#263E6A), 9.18:1 per sta stessa culore di soprabolu è u sfondulu di l'intestatura/ u pede di pagina (#133951), 13.87:1 per a culore di u testu di i buttoni (#1C2B24) è u fondu di i buttoni (#FFF7E7), è 7.16:1 per u fondu di u buttone di ritornu in cima (#FFBB33) è u sfondulu di u pede di pagina (#133951).`,
+
+        accessComplianceTitle: "Statu di cunfurmità",
+        accessComplianceText: `Nessunu auditu cumpletu di u situ, fundatu nant'à i criterii di u <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a>, ùn hè statu ancu realizatu. U situ hè dunque dichjaratu in parte cunforme. Sta sezzione serà messa à ghjornu appena un auditu cumpletu serà statu fattu. Intantu, parechje verifiche tecniche sò state fatte cù l'arnesi di u <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a>.`,
+
+        accessNonAccessibleTitle: "Cuntenuti micca accessibili",
+        accessNonAccessibleText: "À a data di scrittura di sta dichjarazione, i cuntenuti micca accessibili ùn sò ancu stati elencati in modu cumpletu. Sta sezzione serà compia dopu à un auditu cumpletu di u situ.",
+
+        accessExemptionTitle: "Derugazione",
+        accessExemptionText: "Nessuna derugazione per carica sproporziunata ùn hè invucata à stu stadiu.",
+
+        accessStatementTitle: "Stabbilimentu di sta dichjarazione d'accessibilità",
+        accessStatementText: "Sta dichjarazione hè stata realizata u 08/06/2026 da u studiente-staziante Boris ROCCHIETTI per u contu di l'Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, assuciazione fundata in u 1970 in Cervioni.",
+
+        accessTechTitle: "Tecnulugie aduprate per a realizazione di u situ web",
+        accessTechText: `HTML, CSS, JavaScript (React, Vite è a bibliuteca PrimeReact). U menu à tendina di cambiamentu di lingua hè ispiratu da un <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">mudellu uriginale</a> di Max Ho.`,
+
+        accessToolsTitle: "Agenti utilizatori, tecnulugie d'assistenza è arnesi aduprati per verificà l'accessibilità",
+        accessToolsText: "E verifiche sò state fatte cù l'agenti utilizatori seguenti : Google Chrome è Mozilla Firefox. E prove sò state realizate principalmente cù a navigazione à a tastiera. L'arnesi aduprati durante a valutazione sò : Lighthouse (estensione Google Chrome), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker è W3C Internationalization Checker.",
+
+        accessPagesTitle: "Pagine di u situ chì anu fattu l'ogettu di a verificazione di cunfurmità",
+        accessPagesText: "Accolta ; À propositu ; Archeulugia ; Infurmazione pratiche ; E sale ; Pianu di u situ ; Accessibilità.",
+
+        accessFeedbackTitle: "Ritornu d'infurmazione è cuntattu",
+        accessFeedbackText: `Sè vo ùn riescite micca à accede à un cuntenutu o à un serviziu, pudete cuntattà u rispunsevule di u situ internet per esse indirizzatu versu una alternativa accessibile o per ottene u cuntenutu sottu un'altra forma. Per cuntattacci, pudete scrive direttamente à <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> o chjamà à u (+33) 04 95 38 12 83.`,
+
+        accessRemedyTitle: "Vie di ricorsu",
+        accessRemedyIntro: "Sta prucedura hè da aduprà in u casu seguente : avete signalatu à u rispunsevule di u situ internet un difettu d'accessibilità chì vi impedisce d'accede à un cuntenutu o à un serviziu di u purtale è ùn avete micca ottenutu una risposta soddisfacente.",
+        accessRemedyListIntro: "Pudete :",
+        accessRemedyItem1: `Scrive un messagiu à u <a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/" target="_blank" rel="noopener noreferrer">Difensore di i diritti </a>.`,
+        accessRemedyItem2: `Cuntattà u <a href="https://www.defenseurdesdroits.fr/carte-des-delegues" target="_blank" rel="noopener noreferrer">delegatu di u Difensore di i diritti </a> in a vostra regione.`,
+        accessRemedyItem3: "Mandà una lettera per posta (di rigalu, senza mette timbru) : Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07.",
+
         eeTitle: "Mi avete truvatu ? Avà ! ",
         eeDesc: 'Bonghjornu, zitelli ! Sè vo site quì, hè o perchè avete avutu una furtuna incredibile, o perchè avete riflettutu bè. Complimenti ! <br /> ... <br /> Chì aspettate ancora ? C\'hè nunda altru da vede quì. Ah, hè ciò chì vedite quì sottu chì vi incuriosisce ? Hè vera chì ci hè un picculu, picculu sicretu. Ma per scoprelu, ci vole à truvà una parolla.',
         eeGuess: 'Indizii :',
@@ -306,6 +419,7 @@ function setAlt(id, value) {
 }
 
 function injectTexts(lang) {
+    document.documentElement.lang = lang;
     const t = texts[lang];
 
     setText('nav-home', t.navHome);
@@ -395,6 +509,45 @@ function injectTexts(lang) {
     setText('infos-faq-2-content', t.infosFaq2Content);
     setText('infos-faq-3-title', t.infosFaq3Title);
     setText('infos-faq-3-content', t.infosFaq3Content);
+
+    setText('access-title', t.accessTitle);
+    setText('access-identity-title', t.accessIdentityTitle);
+    setText('access-identity-text', t.accessIdentityText);
+
+    setText('access-results-title', t.accessResultsTitle);
+    setText('access-results-text-1', t.accessResultsText1);
+    setText('access-results-text-2', t.accessResultsText2);
+
+    setText('access-compliance-title', t.accessComplianceTitle);
+    setText('access-compliance-text', t.accessComplianceText);
+
+    setText('access-nonaccessible-title', t.accessNonAccessibleTitle);
+    setText('access-nonaccessible-text', t.accessNonAccessibleText);
+
+    setText('access-exemption-title', t.accessExemptionTitle);
+    setText('access-exemption-text', t.accessExemptionText);
+
+    setText('access-statement-title', t.accessStatementTitle);
+    setText('access-statement-text', t.accessStatementText);
+
+    setText('access-tech-title', t.accessTechTitle);
+    setText('access-tech-text', t.accessTechText);
+
+    setText('access-tools-title', t.accessToolsTitle);
+    setText('access-tools-text', t.accessToolsText);
+
+    setText('access-pages-title', t.accessPagesTitle);
+    setText('access-pages-text', t.accessPagesText);
+
+    setText('access-feedback-title', t.accessFeedbackTitle);
+    setText('access-feedback-text', t.accessFeedbackText);
+
+    setText('access-remedy-title', t.accessRemedyTitle);
+    setText('access-remedy-text-intro', t.accessRemedyIntro);
+    setText('access-remedy-list-intro', t.accessRemedyListIntro);
+    setText('access-remedy-item-1', t.accessRemedyItem1);
+    setText('access-remedy-item-2', t.accessRemedyItem2);
+    setText('access-remedy-item-3', t.accessRemedyItem3);
 
     setText('ee-title', t.eeTitle);
     setText('ee-desc', t.eeDesc);

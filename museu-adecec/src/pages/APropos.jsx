@@ -12,6 +12,7 @@ export default function APropos() {
           <img
             src={cathedrale}
             alt="Église"
+            title="Cathedrale de Cervione, vieille image"
             id="about-church-img"
             className="about-img about-img--cathedrale"
           />
@@ -31,6 +32,7 @@ export default function APropos() {
             <img
               src={museu}
               alt="Intérieur du musée"
+              title="L'intérieur du musée d'ethnographie"
               id="about-museum-inside-img"
               className="about-img about-img--museu"
             />
@@ -50,6 +52,7 @@ export default function APropos() {
             <img
               src={museeExterieur}
               alt="Extérieur du musée"
+              title="L'extérieur du musée de l'ADECEC"
               id="about-museum-outside-img"
               className="about-img about-img--musee-exterieur"
             />

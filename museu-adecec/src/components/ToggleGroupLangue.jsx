@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { injectTexts } from '../scripts/language-switch';
-
 import flagFr from '../assets/flag-fr.webp';
 import flagCo from '../assets/flag-co.webp';
 import flagEn from '../assets/flag-en.webp';
@@ -18,6 +17,7 @@ export default function ToggleGroupLangue() {
   );
 
   const wrapperRef = useRef(null);
+  const menuItemsRef = useRef([]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -25,17 +25,21 @@ export default function ToggleGroupLangue() {
         setIsOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   useEffect(() => {
     const savedLang = localStorage.getItem('museum-lang') || 'fr';
     setSelectedLang(savedLang);
   }, []);
+
+  // Focus le premier item quand le menu s'ouvre
+  useEffect(() => {
+    if (isOpen && menuItemsRef.current[0]) {
+      menuItemsRef.current[0].focus();
+    }
+  }, [isOpen]);
 
   const handleSelectLanguage = (lang) => {
     localStorage.setItem('museum-lang', lang);
@@ -44,14 +48,25 @@ export default function ToggleGroupLangue() {
     setIsOpen(false);
   };
 
+  const handleMenuKeyDown = (e, index) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = (index + 1) % LANGUAGES.length;
+      menuItemsRef.current[next]?.focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = (index - 1 + LANGUAGES.length) % LANGUAGES.length;
+      menuItemsRef.current[prev]?.focus();
+    } else if (e.key === 'Escape') {
+      setIsOpen(false);
+    }
+  };
+
   const currentLanguage =
     LANGUAGES.find((language) => language.code === selectedLang) || LANGUAGES[0];
 
   return (
-    <div
-      className="language-switcher"
-      ref={wrapperRef}
-    >
+    <div className="language-switcher" ref={wrapperRef}>
       <button
         type="button"
         className="language-toggle"
@@ -65,22 +80,23 @@ export default function ToggleGroupLangue() {
           alt={currentLanguage.alt}
           className="language-flag language-flag--current"
         />
-        <span className="language-toggle__chevron" aria-hidden="true">
-          ▾
-        </span>
+        <span className="language-toggle__chevron" aria-hidden="true">▾</span>
       </button>
 
       {isOpen && (
         <div className="language-menu" role="menu" aria-label="Choix de la langue">
-          {LANGUAGES.map((language) => (
+          {LANGUAGES.map((language, index) => (
             <button
               key={language.code}
               type="button"
+              ref={(el) => (menuItemsRef.current[index] = el)}
               className={`language-menu__item ${
                 selectedLang === language.code ? 'is-active' : ''
               }`}
               role="menuitem"
+              aria-current={selectedLang === language.code ? 'true' : undefined}
               onClick={() => handleSelectLanguage(language.code)}
+              onKeyDown={(e) => handleMenuKeyDown(e, index)}
             >
               <img
                 src={language.flag}

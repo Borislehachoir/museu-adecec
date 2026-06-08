@@ -23,7 +23,7 @@ export default function Layout() {
     <>
       <Navbar />
 
-      <main className="page-shell">
+      <main className="page-shell" id="main-content">
         <Outlet />
       </main>
 

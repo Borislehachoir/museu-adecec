@@ -96,12 +96,12 @@ export default function Accueil() {
               style={{ backgroundImage: `url(${images[index]})` }}
             >
               <div className="info-card__overlay">
-                <h3 id={`card-${card.id}-title`}>
+                <h2 id={`card-${card.id}-title`}>
                   {card.id === 1 && 'Découvrir les étages'}
                   {card.id === 2 && 'Découvrir la partie archéologique'}
                   {card.id === 3 && 'Préparez votre visite !'}
                   {card.id === 4 && 'Découvrir le lieu'}
-                </h3>
+                </h2>
 
                 <p id={`card-${card.id}-text`}>
                   {card.id === 1 && "Une première entrée pour parcourir les espaces du musée, notamment par le biais d'une visite virtuelle."}

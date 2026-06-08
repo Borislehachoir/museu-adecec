@@ -24,6 +24,7 @@ export default function LesSalles() {
                 alt="Cathédrale"
                 className="salle-image"
                 id="cath-image"
+                title="Visite virtuelle du musée ADECEC"
               />
               <figcaption id = "figcap-salles">Visite virtuelle</figcaption>
             </figure>
@@ -31,7 +32,7 @@ export default function LesSalles() {
 
           <div className="salle-card__content">
             <div className="info-card__overlay">
-              <h3 id="rooms-title">Lorem ipsum default header</h3>
+              <h2 id="rooms-title">Lorem ipsum default header</h2>
               <p id="rooms-desc">
                 Lorem ipsum default text
               </p>
