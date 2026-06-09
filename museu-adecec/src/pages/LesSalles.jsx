@@ -1,4 +1,5 @@
 import cathedrale from '../assets/capre-corsi.webp';
+import apercu from '../assets/guide-corsu-apercu.pdf'
 
 export default function LesSalles() {
   return (
@@ -37,7 +38,7 @@ export default function LesSalles() {
                 Lorem ipsum default text
               </p>
               <a
-                href="https://www.google.com"
+                href={apercu}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"

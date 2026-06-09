@@ -1396,23 +1396,3 @@ button {
     max-width: 100%;
   }
 }
-
-@media (max-width: 700px) {
-  .infos-page__inner {
-    grid-template-columns: 32px 1fr;
-    gap: 1rem;
-  }
-
-  .infos-card {
-    padding: 1rem;
-    min-height: auto;
-  }
-
-  .infos-card h2 {
-    font-size: 1.45rem;
-  }
-
-  .infos-card__image-wrap img {
-    height: 180px;
-  }
-}
