@@ -57,11 +57,11 @@ You will see this thing has many small sections marked by one-line gaps. These s
 - **footer** : all the texts available in the footer ;
 - **pf** : everything that's related to the pre-footer ;
 - **arch** : archeology content ;
-- rooms : texts and stuff related to the Rooms and guided visit page. 
-- nf : Page for Error 404 - Not Found ;
-- about : stuff that's displayed on the About the Museum page. 
-- infos : the informations you can find on Informations Pratiques ;
-- access : stuff related to the accessibily declaration ;
+- **rooms** : texts and stuff related to the Rooms and guided visit page. 
+- **nf** : Page for Error 404 - Not Found ;
+- **about** : stuff that's displayed on the About the Museum page. 
+- **infos** : the informations you can find on Informations Pratiques ;
+- **access** : stuff related to the accessibily declaration ;
 > [!NOTE]
 > The declaration has to be updated at least once every three years.
 - ee : the easter egg page (you might not check it often but consider it a legacy of sorts, i just wanted to try stuff out haha)
