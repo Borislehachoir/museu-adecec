@@ -8,7 +8,6 @@ const texts = {
 
         homeTitle: 'Bienvenue sur le site du musée',
         homeIntro: 'Fondé en 1970 dans l’esprit du Riacquistu, l’ADECEC œuvre à la valorisation de la culture et de la langue corses. Son musée ethnographique, installé dans l’ancien séminaire de Cervioni, présente la vie quotidienne des Corses aux XIXe et première moitié du XXe siècle, à travers des objets principalement issus de dons et de prêts.',
-
         card1Title: 'Découvrir les étages',
         card1Text: 'Une première entrée pour parcourir les espaces du musée, notamment par le biais d\'une visite virtuelle.',
         card2Title: 'Découvrir la partie archéologique',
@@ -88,38 +87,27 @@ const texts = {
         infosFaq3Content: 'Le bâtiment étant classé en monument historique, nous ne pouvons réaliser les aménagements nécessaires pour les personnes en fauteuil roulant ou ayant des difficultés à se déplacer. Cependant, notre musée est accessible aux personnes malvoyantes, malentendantes et à toute autre personne en situation de handicap, visible ou invisible.',
 
         accessTitle: "Déclaration d'accessibilité",
-
         accessIdentityTitle: "Identité du déclarant",
         accessIdentityText: `Ce site est édité par ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONE,<br/>Tél. 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN : 325 192 383<br/>SIRET du siège social : 325 192 383 00017<br/>Code NAF/APE : 94.99Z.`,
-
         accessResultsTitle: "Résultats des tests",
         accessResultsText1: `Très accessible (score au-dessus de 90 sur chaque catégorie sur <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
         accessResultsText2: `Contraste vérifié avec <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a> : 9.89:1 pour l'arrière-plan des cartes (#263E6A) et du site (#F8F7F3), 8.03:1 pour la couleur de survol des boutons (#fedc97) et l'arrière-plan des cartes (#263E6A), 9.18:1 pour cette même couleur de survol et l'arrière-plan du header/footer (#133951), 13.87:1 pour la couleur du texte des boutons (#1C2B24) et le fond des boutons (#FFF7E7), et 7.16:1 pour le fond du bouton de retour en haut (#FFBB33) et l'arrière-plan du footer (#133951).`,
-
         accessComplianceTitle: "État de conformité",
         accessComplianceText: `Aucun audit complet du site fondé sur les critères du <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a> n'a encore été réalisé. Le site est donc déclaré partiellement conforme. Cette section sera mise à jour dès qu'un audit complet aura été mené. En attendant, plusieurs vérifications techniques ont été effectuées à l'aide des outils du <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a>.`,
-
         accessNonAccessibleTitle: "Contenus non accessibles",
         accessNonAccessibleText: "À la date de rédaction de cette déclaration, les contenus non accessibles n'ont pas encore été listés de manière exhaustive. Cette section sera complétée après audit complet du site.",
-
         accessExemptionTitle: "Dérogation",
         accessExemptionText: "Aucune dérogation pour charge disproportionnée n'est invoquée à ce jour.",
-
         accessStatementTitle: "Établissement de cette déclaration d'accessibilité",
         accessStatementText: "Cette déclaration a été réalisée le 05/06/2026 par l'étudiant-stagiaire Boris ROCCHIETTI pour le compte de l'Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, association fondée en 1970 à Cervioni.",
-
         accessTechTitle: "Technologies utilisées pour la réalisation du site web",
         accessTechText: `HTML, CSS, JavaScript (React, Vite et la bibliothèque PrimeReact). Le menu déroulant de changement de langue est inspiré d'un <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">modèle original</a> de Max Ho.`,
-
         accessToolsTitle: "Agents utilisateurs, technologies d'assistance et outils utilisés pour vérifier l'accessibilité",
         accessToolsText: `Les vérifications ont été réalisées avec les agents utilisateurs suivants : Google Chrome et Mozilla Firefox. Les essais ont été effectués principalement au clavier. Les outils utilisés lors de l'évaluation sont : Lighthouse (extension Google Chrome), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker et W3C Internationalization Checker.`,
-
         accessPagesTitle: "Pages du site ayant fait l'objet de la vérification de conformité",
         accessPagesText: "Accueil ; À propos ; Archéologie ; Infos pratiques ; Les salles ; Plan du site ; Accessibilité.",
-
         accessFeedbackTitle: "Retour d'information et contact",
         accessFeedbackText: `Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable du site internet pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme. Pour nous contacter, vous pouvez écrire directement à <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> ou nous appeler au (+33) 04 95 38 12 83.`,
-
         accessRemedyTitle: "Voies de recours",
         accessRemedyIntro: "Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un service du portail et vous n’avez pas obtenu de réponse satisfaisante.",
         accessRemedyListIntro: "Vous pouvez :",
@@ -225,38 +213,27 @@ const texts = {
         infosFaq3Content: 'As the building is registered as a national heritage site under the <em>Monument Historique</em> designation, we cannot carry out the necessary adaptations for wheelchair users or people with mobility difficulties. However, our museum is accessible to people with visual or hearing impairments, as well as to any other person living with a disability, whether visible or invisible.',
 
         accessTitle: "Accessibility statement",
-
         accessIdentityTitle: "Publisher identity",
         accessIdentityText: `This website is published by ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONE,<br/>Phone: 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN: 325 192 383<br/>Head office SIRET: 325 192 383 00017<br/>NAF/APE code: 94.99Z.`,
-
         accessResultsTitle: "Test results",
         accessResultsText1: `Highly accessible (score above 90 in every category on <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
         accessResultsText2: `Contrast checked with <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a>: 9.89:1 for the card background (#263E6A) against the site background (#F8F7F3), 8.03:1 for the button hover colour (#fedc97) against the card background (#263E6A), 9.18:1 for that same hover colour against the header/footer background (#133951), 13.87:1 for the button text colour (#1C2B24) against the button background (#FFF7E7), and 7.16:1 for the back-to-top button background (#FFBB33) against the footer background (#133951).`,
-
         accessComplianceTitle: "Compliance status",
         accessComplianceText: `No full audit of the website based on the criteria of <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a> has yet been carried out. The website is therefore declared partially compliant. This section will be updated as soon as a full audit has been completed. In the meantime, several technical checks have been carried out using <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a> tools.`,
-
         accessNonAccessibleTitle: "Non-accessible content",
         accessNonAccessibleText: "On the date this statement was written, non-accessible content had not yet been listed exhaustively. This section will be completed after a full audit of the website.",
-
         accessExemptionTitle: "Exemptions",
         accessExemptionText: "No exemption for disproportionate burden is claimed at this stage.",
-
         accessStatementTitle: "Preparation of this accessibility statement",
         accessStatementText: "This statement was prepared on 05/06/2026 by student intern Boris ROCCHIETTI on behalf of the Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, an association founded in 1970 in Cervioni.",
-
         accessTechTitle: "Technologies used to build the website",
         accessTechText: `HTML, CSS, JavaScript (React, Vite and the PrimeReact library). The language-switching dropdown menu is inspired by an <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">original model</a> by Max Ho.`,
-
         accessToolsTitle: "User agents, assistive technologies and tools used to verify accessibility",
         accessToolsText: "The checks were carried out using the following user agents: Google Chrome and Mozilla Firefox. Testing was performed mainly with keyboard navigation. The tools used during the evaluation were: Lighthouse (Google Chrome extension), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker and W3C Internationalization Checker.",
-
         accessPagesTitle: "Pages of the website checked for compliance",
         accessPagesText: "Home; About; Archaeology; Practical information; The rooms; Sitemap; Accessibility.",
-
         accessFeedbackTitle: "Feedback and contact",
         accessFeedbackText: `If you are unable to access any content or service, you may contact the website manager in order to be directed to an accessible alternative or to obtain the content in another form. To contact us, you can write directly to <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> or call us at (+33) 04 95 38 12 83.`,
-
         accessRemedyTitle: "Remedies",
         accessRemedyIntro: "This procedure should be used in the following case: you have reported an accessibility issue to the website manager that prevents you from accessing content or a service on the portal, and you have not received a satisfactory response.",
         accessRemedyListIntro: "You may:",
@@ -354,38 +331,27 @@ const texts = {
         infosFaq3Content: 'Siccome l’edifiziu hè classificatu munumentu storicu, ùn pudemu fà l’aghjustamenti necessarii per e persone in carrughjinu o cù difficultà à move si. Invece, u nostru museu hè accessibile à e persone cun difficultà visuale o auditiva, è à ogni altra persona in situazione di disabilità, visibile o micca.',
 
         accessTitle: "Dichjarazione d'accessibilità",
-
         accessIdentityTitle: "Identità di u dichjarente",
         accessIdentityText: `Stu situ hè editatu da ETUDE DEVELOP CENTRE EST DE LA CORSE (ADECEC),<br/>8 Carrughju Filipu Pescetti, 20221 CERVIONI,<br/>Tel. 04 95 38 12 83<br/><a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a><br/>SIREN : 325 192 383<br/>SIRET di a sede suciale : 325 192 383 00017<br/>Codice NAF/APE : 94.99Z.`,
-
         accessResultsTitle: "Risultati di e prove",
         accessResultsText1: `Assai accessibile (puntuazione sopra à 90 in ogni categuria nant'à <a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fmuseu-adecec.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" target="_blank" rel="noopener noreferrer">Lighthouse</a>).`,
         accessResultsText2: `U cuntrastu hè statu verificatu cù <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Color Contrast Checker</a> : 9.89:1 per u sfondulu di e carte (#263E6A) è di u situ (#F8F7F3), 8.03:1 per a culore di soprabolu di i buttoni (#fedc97) è u sfondulu di e carte(#263E6A), 9.18:1 per sta stessa culore di soprabolu è u sfondulu di l'intestatura/ u pede di pagina (#133951), 13.87:1 per a culore di u testu di i buttoni (#1C2B24) è u fondu di i buttoni (#FFF7E7), è 7.16:1 per u fondu di u buttone di ritornu in cima (#FFBB33) è u sfondulu di u pede di pagina (#133951).`,
-
         accessComplianceTitle: "Statu di cunfurmità",
         accessComplianceText: `Nessunu auditu cumpletu di u situ, fundatu nant'à i criterii di u <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener noreferrer">RGAA 4.1.2</a>, ùn hè statu ancu realizatu. U situ hè dunque dichjaratu in parte cunforme. Sta sezzione serà messa à ghjornu appena un auditu cumpletu serà statu fattu. Intantu, parechje verifiche tecniche sò state fatte cù l'arnesi di u <a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener noreferrer">W3C</a>.`,
-
         accessNonAccessibleTitle: "Cuntenuti micca accessibili",
         accessNonAccessibleText: "À a data di scrittura di sta dichjarazione, i cuntenuti micca accessibili ùn sò ancu stati elencati in modu cumpletu. Sta sezzione serà compia dopu à un auditu cumpletu di u situ.",
-
         accessExemptionTitle: "Derugazione",
         accessExemptionText: "Nessuna derugazione per carica sproporziunata ùn hè invucata à stu stadiu.",
-
         accessStatementTitle: "Stabbilimentu di sta dichjarazione d'accessibilità",
         accessStatementText: "Sta dichjarazione hè stata realizata u 08/06/2026 da u studiente-staziante Boris ROCCHIETTI per u contu di l'Association pour le Développement des Études Archéologiques, Historiques, Linguistiques et Naturalistes du Centre-Est de la Corse, assuciazione fundata in u 1970 in Cervioni.",
-
         accessTechTitle: "Tecnulugie aduprate per a realizazione di u situ web",
         accessTechText: `HTML, CSS, JavaScript (React, Vite è a bibliuteca PrimeReact). U menu à tendina di cambiamentu di lingua hè ispiratu da un <a href="https://hohkfuyuhi.github.io/JS-language-changer/" target="_blank" rel="noopener noreferrer">mudellu uriginale</a> di Max Ho.`,
-
         accessToolsTitle: "Agenti utilizatori, tecnulugie d'assistenza è arnesi aduprati per verificà l'accessibilità",
         accessToolsText: "E verifiche sò state fatte cù l'agenti utilizatori seguenti : Google Chrome è Mozilla Firefox. E prove sò state realizate principalmente cù a navigazione à a tastiera. L'arnesi aduprati durante a valutazione sò : Lighthouse (estensione Google Chrome), WebAIM Color Contrast Checker, W3C Markup Validation Service, W3C CSS Validation Service, W3C Link Checker è W3C Internationalization Checker.",
-
         accessPagesTitle: "Pagine di u situ chì anu fattu l'ogettu di a verificazione di cunfurmità",
         accessPagesText: "Accolta ; À propositu ; Archeulugia ; Infurmazione pratiche ; E sale ; Pianu di u situ ; Accessibilità.",
-
         accessFeedbackTitle: "Ritornu d'infurmazione è cuntattu",
         accessFeedbackText: `Sè vo ùn riescite micca à accede à un cuntenutu o à un serviziu, pudete cuntattà u rispunsevule di u situ internet per esse indirizzatu versu una alternativa accessibile o per ottene u cuntenutu sottu un'altra forma. Per cuntattacci, pudete scrive direttamente à <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> o chjamà à u (+33) 04 95 38 12 83.`,
-
         accessRemedyTitle: "Vie di ricorsu",
         accessRemedyIntro: "Sta prucedura hè da aduprà in u casu seguente : avete signalatu à u rispunsevule di u situ internet un difettu d'accessibilità chì vi impedisce d'accede à un cuntenutu o à un serviziu di u purtale è ùn avete micca ottenutu una risposta soddisfacente.",
         accessRemedyListIntro: "Pudete :",
