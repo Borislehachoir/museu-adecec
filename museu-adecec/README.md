@@ -85,7 +85,7 @@ Pas de panique. Respirer, fermer les yeux, penser à un bon souvenir. Appuyer su
 > Petit dico pour les non-anglophones ou pour comprendre mes abréviations sorties (pour rester poli) d'on ne sait où : <br>
 > **Title** = Titre ; <br> **Btn** = Button/ Bouton ; <br> **Card** = Carte (ici, les jolies boîtes qu'on survole, notamment sur la page d'accueil) ; <br>**Footer** = Pied de page ; <br>**Brand** = marque (ici le nom de l'entreprise) ; <br>**Hero** = pas Superman :c. Fait référence dans cette situation au contenu principal (*main content*) ; <br>**Miss** = Missions ;<br>**Hist** = Histoire ;<br> **Breadcrumb** : en haut d'une page, un élément pour mieux visualiser là où on se trouve. Signifie "Miette de pain" ; <br> **Plusieurs mots** qui ont leur traduction juste à côté, dont par ex. Church. <br> **Tech** = Technology/ies (utilisée dans le site) ; <br> **Remedy** : littéralement Remédier, ici dans le sens *"solutions pour remédier"*, synonyme du *"voies de recours"* utilisé dans le site. 
 
-Vous y trouverez les sections suivantes : 
+Vous y trouverez les sections suivantes : <br>
     - fr (français) <br>
     - en (anglais)<br>
     - co (corse)<br>
