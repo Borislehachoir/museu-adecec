@@ -90,7 +90,7 @@ Vous y trouverez les sections suivantes : <br>
     - en (anglais)<br>
     - co (corse)<br>
 
-Dans chaque section, il y a le contenu de toutes les pages. 
+Dans chaque section, il y a le contenu de toutes les pages. <br>
     - **nav** : textes de la barre de navigation (header)<br>
     - **home** (jusqu'à **open**) : tout ce qui est page d'accueil ;<br>
     - **footer** : les informations disponibles dans le pied de page ;<br>
