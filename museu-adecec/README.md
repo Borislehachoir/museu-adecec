@@ -61,16 +61,16 @@ Tutoriel utile : [Commencer Git & GitHub (niveau débutant)](https://doto.ovh/se
 Ouvrir VS Code, et se connecter à GitHub. Créer un dossier (museu, adecec-museu, etc)
 
 ### **ETAPE 2** (à ne faire qu'une seule fois) : 
-    - Ouvrir un nouveau terminal sur VS Code;
-    <img src="./src/assets/openterminal.png" alt=" ouvrir nouveau terminal vs code" height="300px">
-    - Cloner le repository (voir Tutoriel pour voir méthode si nécessaire).
+- Ouvrir un nouveau terminal sur VS Code;
+<img src="./src/assets/openterminal.png" alt=" ouvrir nouveau terminal vs code" height="300px">
+- Cloner le repository (voir Tutoriel pour voir méthode si nécessaire).
     ```
     git clone https://github.com/Borislehachoir/museu-adecec.git
     ```
-    <img src="./src/assets/gitclone.png" alt=" coller la ligne git clone dans le terminal" height="500px">
+<img src="./src/assets/gitclone.png" alt=" coller la ligne git clone dans le terminal" height="500px">
 
 ### **ETAPE 3** : 
-Ouvrir le dossier **museu-adecec** ainsi cloné. Et là, c'est le drame. *Il y a plein de fichiers de partout oh mon dieu au secours mais quelle horreur je vais mourir pourquoi l'informatique c'est aussi compliqué Battì est vraiment un garçon courageux moi je peux vraiment pas hein.* <br>
+Ouvrir le dossier **museu-adecec** ainsi cloné. Et là, c'est le drame. *Il y a plein de fichiers de partout oh mon dieu au secours mais quelle horreur je vais mourir pourquoi l'informatique c'est aussi compliqué Battì est vraiment un garçon courageux moi je peux vraiment pas hein.* <br><br>
 Pas de panique. Respirer, fermer les yeux, penser à un bon souvenir. Appuyer sur **src**, puis **scripts** et poser votre curseur sur *language-switch.js*.
     <img src="./src/assets/openjsfile.png" alt=" trouver le fichier js" height="300px">
 
@@ -86,19 +86,20 @@ Pas de panique. Respirer, fermer les yeux, penser à un bon souvenir. Appuyer su
 > **Title** = Titre ; <br> **Btn** = Button/ Bouton ; <br> **Card** = Carte (ici, les jolies boîtes qu'on survole, notamment sur la page d'accueil) ; <br>**Footer** = Pied de page ; <br>**Brand** = marque (ici le nom de l'entreprise) ; <br>**Hero** = pas Superman :c. Fait référence dans cette situation au contenu principal (*main content*) ; <br>**Miss** = Missions ;<br>**Hist** = Histoire ;<br> **Breadcrumb** : en haut d'une page, un élément pour mieux visualiser là où on se trouve. Signifie "Miette de pain" ; <br> **Plusieurs mots** qui ont leur traduction juste à côté, dont par ex. Church. <br> **Tech** = Technology/ies (utilisée dans le site) ; <br> **Remedy** : littéralement Remédier, ici dans le sens *"solutions pour remédier"*, synonyme du *"voies de recours"* utilisé dans le site. 
 
 Vous y trouverez les sections suivantes : 
-    - fr (français)
-    - en (anglais)
-    - co (corse)
+    - fr (français) <br>
+    - en (anglais)<br>
+    - co (corse)<br>
+
 Dans chaque section, il y a le contenu de toutes les pages. 
-    - **nav** : textes de la barre de navigation (header)
-    - **home** (jusqu'à **open**) : tout ce qui est page d'accueil ;
-    - **footer** : les informations disponibles dans le pied de page ;
-    - **pf** : informations du composant Pré-Footer (avec carte OpenStreetMap, etc) ;
-    - **arch** : la section archéologie et son contenu ;
-    - **rooms** : page de la visite virtuelle (`pages/LesSalles.jsx`), de la présentation des salles et du guide ;
-    - **nf** : Page d'erreur 404 - Not Found ;
-    - **about** : Page "A propos" et ses textes ;*
-    - **infos** : Page "Infos Pratiques" ; 
+    - **nav** : textes de la barre de navigation (header)<br>
+    - **home** (jusqu'à **open**) : tout ce qui est page d'accueil ;<br>
+    - **footer** : les informations disponibles dans le pied de page ;<br>
+    - **pf** : informations du composant Pré-Footer (avec carte OpenStreetMap, etc) ;<br>
+    - **arch** : la section archéologie et son contenu ;<br>
+    - **rooms** : page de la visite virtuelle (`pages/LesSalles.jsx`), de la présentation des salles et du guide ;<br>
+    - **nf** : Page d'erreur 404 - Not Found ;<br>
+    - **about** : Page "A propos" et ses textes ;*<br>
+    - **infos** : Page "Infos Pratiques" ; <br>
     - **access** : Page de déclaration d'accessibilité (accessible depuis le footer sur le site)
 
 ### **ETAPE 5** : Modifier un texte dans *language-switch.js*. 
@@ -121,7 +122,7 @@ nécessite de sauter une ligne sinon c'est ingérable`,
 ```
 
 Là, parce que vous utilisez des backticks (ou accents graves en français), le langage comprend qu'il doit continuer à la lire le fichier jusqu'à trouver le prochain backtick. Et une fois cette opération faite, il continue sur la prochaine ligne, et ainsi de suite. 
-A la fin d'une chaîne de caractères, après l'avoir fermée avec un backtick (`) ou une apostrophe ('), veuillez à ne jamais oublier de mettre une virgule. C'est ce symbole qui permet au language de comprendre qu'il a fini de lire la ligne, et qu'il en attaque une nouvelle. 
+A la fin d'une chaîne de caractères, après l'avoir fermée avec un backtick (`) ou une apostrophe ('), veuillez à ne jamais oublier de mettre une virgule. C'est ce symbole qui permet au language de comprendre qu'il a fini de lire la ligne, et qu'il en attaque une nouvelle. <br>
 **CE QUI EST RECOMMANDE** : Copier-coller votre texte dans l'espace entre les backticks/apostrophes. 
 
 ```
@@ -130,7 +131,7 @@ exemple : `lagtrain - inabakumori (english subs)`,
 ```
 
 > [!TIP]
-> La balise `<br/>` (*breakreset*) que vous voyez un peu partout depuis tout à l'heure sert à revenir dans la ligne. En mettre deux permet de laisser un espace d'environ deux lignes entre deux paragraphes.
+> La balise `<br/>` (*breakreset*), que vous voyez un peu partout depuis tout à l'heure, sert à revenir dans la ligne. En mettre deux permet de laisser un espace d'environ deux lignes entre deux paragraphes.
 
  ### **ETAPE 6** : Valider les modifications
 
