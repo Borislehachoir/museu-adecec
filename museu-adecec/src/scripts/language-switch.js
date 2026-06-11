@@ -13,7 +13,7 @@ const texts = {
         Son musée ethnographique, installé dans l\'ancien séminaire de Cervioni, présente la vie quotidienne des Corses aux XIXe 
         et première moitié du XXe siècle, à travers des objets principalement issus de dons et de prêts.`,
         card1Title: 'Découvrir les étages',
-        card1Text: 'Une première entrée pour parcourir les espaces du musée, notamment par le biais d\'une visite virtuelle.',
+        card1Text: 'Une première entrée pour parcourir les espaces du musée, notamment par le biais d\'une visite guidée numérique.',
         card2Title: 'Découvrir la partie archéologique',
         card2Text: 'Explorer les collections et contenus liés à l\'archéologie.',
         card3Title: 'Préparez votre visite !',
