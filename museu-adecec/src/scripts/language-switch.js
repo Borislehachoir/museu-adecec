@@ -7,7 +7,6 @@ const texts = {
         navArchaeology: 'Archéologie',
         navInfos: 'Infos pratiques',
         navAbout: 'À propos',
-
         /*home*/
         homeTitle: 'Bienvenue sur le site du musée',
         homeIntro: `Fondé en 1970 dans l\'esprit du Riacquistu, l\'ADECEC œuvre à la valorisation de la culture et de la langue corses.
@@ -44,7 +43,7 @@ const texts = {
         Le musée reste toutefois accessible aux personnes malvoyantes, malentendantes et à toute autre personne en situation de handicap, visible ou invisible.<br /><br />
         <h4>Venir visiter</h4> Le musée se situe au 8, Carrughju Filipu Pescetti, dans le village de Cervione. <br /> 
         Il est à 45 minutes de l\'aéroport Bastia-Poretta, à 30 minutes d\'Aleria et à une heure de Bastia.<br />
-        Il n\'est accessible, hors voyages en autocar, qu\'en voiture et à vélo.`,
+        Il n\'est accessible, hors voyages en autocar, qu\'en voiture, à moto et à vélo.`,
 
         /*Page 'Archéologie' (arch) */
         archTitle: 'Archéologie',
@@ -171,7 +170,7 @@ const texts = {
         accessRemedyItem1: `Écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/" target="_blank" rel="noopener noreferrer">Défenseur des droits</a>.`,
         accessRemedyItem2: `Contacter le <a href="https://www.defenseurdesdroits.fr/carte-des-delegues" target="_blank" rel="noopener noreferrer">délégué du Défenseur des droits</a> dans votre région.`,
         accessRemedyItem3: "Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) : Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07.",
-
+        /*easter egg */
         eeTitle: 'Vous m\'avez trouvé ?',
         eeDesc: 'Bien le bonjour ! ... <br /> ...',
         eeHintsTitle: 'Indices :',
