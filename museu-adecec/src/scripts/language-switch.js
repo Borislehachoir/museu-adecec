@@ -8,7 +8,7 @@ const texts = {
         navInfos: 'Infos pratiques',
         navAbout: 'À propos',
         /*home*/
-        homeTitle: '',
+        homeTitle: 'Musée Antone Dumenicu Monti',
         homeIntro: `Fondé en 1970 dans l\'esprit du Riacquistu, l\'ADECEC œuvre à la valorisation de la culture et de la langue corses.
         Son musée ethnographique, installé dans l\'ancien séminaire de Cervioni, présente la vie quotidienne des Corses aux XIXe 
         et première moitié du XXe siècle, à travers des objets principalement issus de dons et de prêts.`,
