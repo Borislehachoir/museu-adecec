@@ -111,7 +111,7 @@ const texts = {
         infosTarif2Title: 'Visite guidée (1h30), minimum 10 personnes',
         infosTarif2Content: ' Adultes (+ de 17 ans) : 7€ / personne <br /><br /> Enfant (12 à 16ans) : 5€ / personne <br /><br /> Enfant (- de 12 ans) : gratuit',
         infosFaqTitle: 'FAQ',
-        infosFaq1Title: 'Où vous contacter ? ',
+        infosFaq1Title: 'Où nous contacter ? ',
         infosFaq1Content: 'Par téléphone au 04 95 38 12 83, par mail sur <a href="mailto:secretariat@adecec.net"> secretariat@adecec.net</a> et par courrier au 8 Carrughju Filippu Pescetti, 20221 CERVIONE.',
         infosFaq2Title: 'Quels sont vos conditions pour les dons ? ',
         infosFaq2Content: `Nous acceptons uniquement les objets ethnographiques provenant de notre île, principalement du XIXe siècle jusqu\'à la première moitié du XXe siècle. 
