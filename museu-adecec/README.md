@@ -50,11 +50,14 @@ No additional configuration is required.
 Version française pour confort d'usage par l'utilisateur (ici le personnel de l'ADECEC).
 ## Informations préalables
 > [!IMPORTANT]
-> Le back office a été partiellement réalisé sous la forme d'une base de données NoSQL Firestore Database avec une base de données et un système d'authentification avec email + mot de passe, Vercel ne supportant pas le langage informatique PHP. Pour y accéder, rechercher "*Firebase*" sur votre moteur de recherche favori, cliquersur "*Go to Console*", se connecter avec **pcjac@adecec.net**, et entrer sur le projet *adecec-muse* (ou *adecec-museu*). Pour instaurer ces changements à l'avenir, une restructuration de l'architecture du *language-switch.js* et l'insertion d'un fichier *firestore.js* avec le Web SDK (disponible sur Paramètres > Général > Vos applications) devront être implémentés. 
+> Le back office a été partiellement réalisé sous la forme d'une base de données NoSQL Firestore Database avec une base de données et un système d'authentification avec email + mot de passe, Vercel ne supportant pas le langage informatique PHP. Pour y accéder, rechercher "*Firebase*" sur votre moteur de recherche favori, cliquer sur "*Go to Console*", se connecter avec **pcjac@adecec.net**, et entrer sur le projet *adecec-muse* (ou *adecec-museu*). Pour davantage instaurer ces changements à l'avenir, une restructuration complète de l'architecture du *language-switch.js*, l'insertion d'un fichier *firestore.js* avec le Web SDK (disponible sur Paramètres > Général > Vos applications) ainsi que d'un Login.jsx et d'un BackOffice.jsx devront être implémentés. 
 
 Matériel nécessaire : [Git](https://git-scm.com/), [VS Code](https://code.visualstudio.com/download), [GitHub](https://github.com/JacPaoli). 
 
 Tutoriel utile : [Commencer Git & GitHub (niveau débutant)](https://doto.ovh/semestre_1/produire_Un_Site_Web/hebergement)
+
+> [!TIP]
+> Il est recommandé de travailler sur un ordinateur où ces logiciels / technologies sont déjà installées et configurées, mais si vous souhaitez le faire sur votre machine personnelle, il est vivement conseillé de suivre le tutoriel. Il est fortement conseillé d'utiliser le compte Github JacPaoli (pcjac@adecec.net). Pour le mot de passe, demander à Battì (ceci est un README et étant donné que le repository est public, il serait mal avisé de le communiquer ici.)
 
 ## Guide
 ### **ETAPE 1** : 
@@ -64,10 +67,14 @@ Ouvrir VS Code, et se connecter à GitHub. Créer un dossier (museu, adecec-muse
 - Ouvrir un nouveau terminal sur VS Code;
 <img src="./src/assets/openterminal.png" alt=" ouvrir nouveau terminal vs code" height="300px">
 - Cloner le repository (voir Tutoriel pour voir méthode si nécessaire).
-    ```
+
+    ```bash
     git clone https://github.com/Borislehachoir/museu-adecec.git
     ```
+
 <img src="./src/assets/gitclone.png" alt=" coller la ligne git clone dans le terminal" height="500px">
+
+- configurer l'email et le username
 
 ### **ETAPE 3** : 
 Ouvrir le dossier **museu-adecec** ainsi cloné. Et là, c'est le drame. *Il y a plein de fichiers de partout oh mon dieu au secours mais quelle horreur je vais mourir pourquoi l'informatique c'est aussi compliqué Battì est vraiment un garçon courageux moi je peux vraiment pas hein.* <br><br>
