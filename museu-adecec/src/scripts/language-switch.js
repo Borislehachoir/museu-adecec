@@ -103,7 +103,7 @@ const texts = {
         A la journée, à la demi-journée où à l\'heure, découvrez les arts et traditions populaires à travers la visite du musée ethnographique de l\'ADECEC,
         apprenez à jouer aux jeux traditionnels, arpentez les ruelles du village à la découverte de son histoire, 
         ou initiez-vous à la radio avec Voce Nustrale! <br /> <br /> 
-        Disponible sous trois formes : Journée entière (100 €, maximum 25 élèves), demi-journée(50 euros, maximum 25 élèves, deux ateliers au choix) et visite du musée (1 heure, 20 élèves maximu, 2 euros / élève) <br /><br /> 
+        Disponible sous trois formes : Journée entière (100 €, maximum 25 élèves), demi-journée(50 euros, maximum 25 élèves, deux ateliers au choix) et visite du musée (1 heure, 20 élèves maximum, 2 euros / élève) <br /><br /> 
         Réservez votre journée au 04 95 38 12 83 ou sur <a href="mailto:secretariat@adecec.net">secretariat@adecec.net</a> ! <br /><br /><br />`,
         infosTarifsTitle: 'Tarifs',
         infosTarif1Title: 'Visite libre',
