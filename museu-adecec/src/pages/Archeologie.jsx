@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import kayou from '../assets/kayouadecec.webp';
-import storia from '../assets/storiaarcheo.webp';
+import storia from '../assets/archeologiepresentation.JPG';
 import creusets from '../assets/jarre.webp';
 
 export default function Archeologie() {
