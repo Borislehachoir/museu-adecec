@@ -9,12 +9,6 @@ const siteMapTexts = {
       {
         key: 'home',
         label: 'Accueil',
-        children: [
-          {
-            key: 'fr',
-            label: 'Version française',
-          },
-        ],
       },
       {
         key: 'archeo',
@@ -38,6 +32,18 @@ const siteMapTexts = {
         key: 'infos',
         label: 'Infos pratiques',
       },
+      {
+        key: 'access',
+        label: 'Déclaration d\'accessibilité',
+      },
+      {
+        key: 'nf',
+        label: 'Page d\'erreur 404',
+      },
+      {
+        key: 'ee',
+        label: 'Page Easter Egg',
+      },
     ],
   },
 
@@ -48,12 +54,6 @@ const siteMapTexts = {
       {
         key: 'home',
         label: 'Home',
-        children: [
-          {
-            key: 'fr',
-            label: 'French version',
-          },
-        ],
       },
       {
         key: 'archeo',
@@ -77,6 +77,18 @@ const siteMapTexts = {
         key: 'infos',
         label: 'Practical information',
       },
+       {
+        key: 'access',
+        label: 'Accessibility statement',
+      },
+      {
+        key: 'nf',
+        label: 'Error 404 - Not Found',
+      },
+      {
+        key: 'ee',
+        label: 'Easter Egg page',
+      },
     ],
   },
 
@@ -87,12 +99,6 @@ const siteMapTexts = {
       {
         key: 'home',
         label: 'Accolta',
-        children: [
-          {
-            key: 'fr',
-            label: 'Versione francese',
-          },
-        ],
       },
       {
         key: 'archeo',
@@ -115,6 +121,18 @@ const siteMapTexts = {
       {
         key: 'infos',
         label: 'Infurmazione pratiche',
+      },
+       {
+        key: 'access',
+        label: 'Dichjarazione d\'accessibilità',
+      },
+      {
+        key: 'nf',
+        label: 'Errore 404 - Pagina micca truvata',
+      },
+      {
+        key: 'ee',
+        label: 'U Easter Egg',
       },
     ],
   },
